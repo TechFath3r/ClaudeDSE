@@ -125,19 +125,16 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* Mobile menu slide */
+/* Mobile menu */
 .mobile-menu {
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-  background-color: #FFFFFF;
-}
-
-.dark .mobile-menu {
-  background-color: #0F0F1A;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease;
 }
 
 .mobile-menu.open {
-  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Frosted glass */

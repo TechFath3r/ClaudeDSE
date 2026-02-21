@@ -9,7 +9,8 @@ const { links, currentPath } = Astro.props;
 
 <div
   id="mobile-menu"
-  class="mobile-menu fixed inset-0 top-16 z-40 bg-white dark:bg-[#0F0F1A] md:hidden"
+  class="mobile-menu fixed inset-0 top-16 z-50 md:hidden"
+  style="background-color: #FFFFFF !important;"
   aria-hidden="true"
 >
   <nav class="flex flex-col px-6 py-8 gap-2">
@@ -40,13 +41,28 @@ const { links, currentPath } = Astro.props;
 
 <script>
   const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
+  const menu = document.getElementById('mobile-menu') as HTMLElement | null;
+
+  // Set background based on dark mode
+  function updateMenuBg() {
+    if (!menu) return;
+    const isDark = document.documentElement.classList.contains('dark');
+    menu.style.backgroundColor = isDark ? '#0F0F1A' : '#FFFFFF';
+  }
+  updateMenuBg();
 
   btn?.addEventListener('click', () => {
     const isOpen = menu?.classList.toggle('open');
     btn.setAttribute('aria-expanded', String(isOpen));
     menu?.setAttribute('aria-hidden', String(!isOpen));
     document.body.style.overflow = isOpen ? 'hidden' : '';
+    updateMenuBg();
+  });
+
+  // Update when theme changes
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle?.addEventListener('click', () => {
+    setTimeout(updateMenuBg, 50);
   });
 
   // Close on link click
