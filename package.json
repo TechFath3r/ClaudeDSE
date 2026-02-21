@@ -1,0 +1,22 @@
+{
+  "name": "dannstarr-electronics",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.3.1",
+    "astro": "^5.17.1",
+    "js-yaml": "^4.1.1",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.3",
+    "@types/js-yaml": "^4.0.9",
+    "tailwindcss": "^4.1.3"
+  }
+}

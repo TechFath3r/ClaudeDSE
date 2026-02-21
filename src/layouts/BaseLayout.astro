@@ -1,0 +1,124 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  article?: boolean;
+}
+
+const {
+  title,
+  description = 'Professional phone, tablet, laptop and computer repair services in Pinchbeck, Spalding. Plus bespoke web design and management.',
+  ogImage = '/android-chrome-512x512.png',
+  article = false,
+} = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const fullTitle = title === 'Home' ? 'DannStarr Electronics | Your Local Tech Experts' : `${title} | DannStarr Electronics`;
+---
+
+<!doctype html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#B70000" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="DannStarr Electronics" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{fullTitle}</title>
+
+    <!-- Theme init (prevents flash of wrong theme) -->
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem('theme');
+        if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+
+    <!-- LocalBusiness Structured Data -->
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "DannStarr Electronics",
+        "description": "Professional phone, tablet, laptop and computer repair services in Pinchbeck, Spalding. Plus bespoke web design and management.",
+        "url": "https://dannstarr.co.uk",
+        "telephone": "+4407907830976",
+        "email": "dannstarrelectronics@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "61 Rotten Row",
+          "addressLocality": "Pinchbeck",
+          "postalCode": "PE11 3RQ",
+          "addressCountry": "GB"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "10:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "10:00",
+            "closes": "15:00"
+          }
+        ],
+        "priceRange": "££",
+        "image": "https://dannstarr.co.uk/android-chrome-512x512.png",
+        "sameAs": [
+          "https://www.facebook.com/dannstarrelectronics"
+        ]
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-(--color-bg-primary) text-(--color-text-primary) antialiased">
+    <!-- Future chatbot root -->
+    <div id="chatbot-root"></div>
+
+    <slot />
+
+    <!-- Future booking app root -->
+    <div id="booking-root"></div>
+
+    <!-- Scroll reveal -->
+    <script>
+      import '../scripts/scroll-reveal.js';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+import Section from '../../components/shared/Section.astro';
+import PostCard from '../../components/blog/PostCard.astro';
+
+const posts = (await getCollection('blog'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+
+<PageLayout
+  title="Blog"
+  description="Tech tips, repair guides, and news from DannStarr Electronics. Stay up to date with the latest in device repairs and web design."
+>
+  <Section>
+    <div class="text-center mb-12 reveal">
+      <h1 class="font-(family-name:--font-heading) text-4xl sm:text-5xl font-extrabold text-(--color-text-primary) mb-4">
+        Our <span class="text-(--color-brand)">Blog</span>
+      </h1>
+      <p class="text-(--color-text-secondary) text-lg max-w-2xl mx-auto">
+        Tech tips, repair guides, and news from the workshop.
+      </p>
+    </div>
+
+    {posts.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.map((post, i) => (
+          <div class={`reveal reveal-delay-${(i % 4) + 1}`}>
+            <PostCard post={post} />
+          </div>
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-12">
+        <p class="text-(--color-text-secondary) text-lg">No posts yet. Check back soon!</p>
+      </div>
+    )}
+  </Section>
+</PageLayout>

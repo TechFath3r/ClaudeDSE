@@ -1,0 +1,29 @@
+- name: "Sarah M."
+  rating: 5
+  text: "Absolutely brilliant service! Dann fixed my iPhone screen in under an hour. Friendly, professional, and very reasonably priced. Wouldn't go anywhere else!"
+  service: "iPhone Screen Repair"
+
+- name: "James T."
+  rating: 5
+  text: "Brought my laptop in with a virus issue and Dann had it sorted the same day. Really knowledgeable and explains everything in plain English. Highly recommend!"
+  service: "Laptop Repair"
+
+- name: "Linda P."
+  rating: 5
+  text: "DannStarr built us a beautiful website for our small business. Professional, modern, and they even help us manage it. Fantastic value for money."
+  service: "Web Design"
+
+- name: "Mark R."
+  rating: 5
+  text: "Great local business! Fixed my Samsung that another shop said couldn't be repaired. Fast turnaround and kept me updated the whole time. Top notch!"
+  service: "Samsung Repair"
+
+- name: "Emma W."
+  rating: 5
+  text: "Had a cracked iPad screen and Dann sorted it perfectly. The kids are thrilled! Really fair prices compared to the big chains. Will definitely be back."
+  service: "iPad Repair"
+
+- name: "David H."
+  rating: 5
+  text: "Excellent data recovery service. Thought I'd lost everything when my hard drive failed but Dann managed to recover all my photos and documents. A lifesaver!"
+  service: "Data Recovery"

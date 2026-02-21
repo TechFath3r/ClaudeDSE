@@ -1,0 +1,61 @@
+---
+interface Props {
+  links: { label: string; href: string }[];
+  currentPath: string;
+}
+
+const { links, currentPath } = Astro.props;
+---
+
+<div
+  id="mobile-menu"
+  class="mobile-menu fixed inset-0 top-16 z-40 bg-(--color-bg-primary) frosted md:hidden"
+  aria-hidden="true"
+>
+  <nav class="flex flex-col px-6 py-8 gap-2">
+    {links.map((link) => (
+      <a
+        href={link.href}
+        class:list={[
+          'py-3 px-4 rounded-lg text-lg font-medium transition-colors',
+          currentPath === link.href
+            ? 'text-(--color-brand) bg-(--color-bg-secondary)'
+            : 'text-(--color-text-primary) hover:bg-(--color-bg-secondary)',
+        ]}
+      >
+        {link.label}
+      </a>
+    ))}
+
+    <a
+      href="https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-4 flex items-center justify-center gap-2 rounded-lg bg-(--color-brand) px-6 py-3 text-lg font-semibold text-white transition-all hover:bg-(--color-brand-hover)"
+    >
+      Book a Repair
+    </a>
+  </nav>
+</div>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(isOpen));
+    menu?.setAttribute('aria-hidden', String(!isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // Close on link click
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      btn?.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    });
+  });
+</script>

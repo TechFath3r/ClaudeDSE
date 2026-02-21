@@ -1,0 +1,27 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Section from '../components/shared/Section.astro';
+import Button from '../components/shared/Button.astro';
+---
+
+<PageLayout title="Page Not Found" description="The page you're looking for doesn't exist.">
+  <Section class="min-h-[60vh] flex items-center">
+    <div class="text-center max-w-lg mx-auto">
+      <div class="text-8xl font-extrabold text-(--color-brand) mb-4 font-(family-name:--font-heading)">404</div>
+      <h1 class="font-(family-name:--font-heading) text-2xl sm:text-3xl font-bold text-(--color-text-primary) mb-4">
+        This Page Needs a Repair!
+      </h1>
+      <p class="text-(--color-text-secondary) text-lg mb-8">
+        Looks like this page is broken — but don't worry, that's kind of our thing. Let's get you back on track.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <Button href="/" variant="primary" size="lg">
+          Back to Home
+        </Button>
+        <Button href="/contact" variant="outline" size="lg">
+          Contact Us
+        </Button>
+      </div>
+    </div>
+  </Section>
+</PageLayout>

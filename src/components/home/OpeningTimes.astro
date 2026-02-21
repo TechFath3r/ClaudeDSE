@@ -1,0 +1,37 @@
+---
+const hours = [
+  { day: 'Monday', time: '10:00 - 18:00' },
+  { day: 'Tuesday', time: '10:00 - 18:00' },
+  { day: 'Wednesday', time: '10:00 - 18:00' },
+  { day: 'Thursday', time: '10:00 - 18:00' },
+  { day: 'Friday', time: '10:00 - 18:00' },
+  { day: 'Saturday', time: '10:00 - 15:00' },
+  { day: 'Sunday', time: 'Closed' },
+];
+
+const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+---
+
+<div class="reveal">
+  <div class="rounded-xl border border-(--color-bg-secondary) bg-(--color-bg-primary) p-6 shadow-sm">
+    <div class="flex items-center gap-2 mb-4">
+      <svg class="w-5 h-5 text-(--color-brand)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <h3 class="font-(family-name:--font-heading) text-lg font-semibold text-(--color-text-primary)">Opening Hours</h3>
+    </div>
+    <div class="space-y-2">
+      {hours.map((h) => (
+        <div
+          class:list={[
+            'flex justify-between py-1.5 px-2 rounded text-sm',
+            h.day === today ? 'bg-(--color-brand)/10 font-semibold text-(--color-brand)' : 'text-(--color-text-secondary)',
+          ]}
+        >
+          <span>{h.day}</span>
+          <span>{h.time}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

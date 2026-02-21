@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { title, description, date, category } = post.data;
+
+const formattedDate = new Date(date).toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+
+// Estimate reading time from the raw body text
+const wordCount = post.body ? post.body.split(/\s+/).length : 0;
+const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+---
+
+<a href={`/blog/${post.id}`} class="block group h-full">
+  <div class="rounded-xl border border-(--color-bg-secondary) bg-(--color-bg-primary) p-6 shadow-sm card-hover h-full flex flex-col">
+    {category && (
+      <span class="inline-block text-xs font-semibold text-(--color-brand) bg-(--color-brand)/10 px-2 py-1 rounded-full mb-3 w-fit">
+        {category}
+      </span>
+    )}
+    <h3 class="font-(family-name:--font-heading) font-semibold text-(--color-text-primary) mb-2 group-hover:text-(--color-brand) transition-colors">
+      {title}
+    </h3>
+    <p class="text-sm text-(--color-text-secondary) mb-4 flex-1">{description}</p>
+    <div class="flex items-center justify-between text-xs text-(--color-text-secondary)">
+      <time datetime={new Date(date).toISOString()}>{formattedDate}</time>
+      <span>{readingTime} min read</span>
+    </div>
+  </div>
+</a>

@@ -1,0 +1,125 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Section from '../components/shared/Section.astro';
+import Card from '../components/shared/Card.astro';
+import Button from '../components/shared/Button.astro';
+---
+
+<PageLayout
+  title="Contact"
+  description="Get in touch with DannStarr Electronics. Visit us at 61 Rotten Row, Pinchbeck, call 07907 830976, or book a repair online."
+>
+  <!-- Hero -->
+  <Section>
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <h1 class="font-(family-name:--font-heading) text-4xl sm:text-5xl font-extrabold text-(--color-text-primary) mb-4">
+        Get in <span class="text-(--color-brand)">Touch</span>
+      </h1>
+      <p class="text-(--color-text-secondary) text-lg">
+        Pop in, call us, or book online. However you'd like to reach us, we'd love to hear from you.
+      </p>
+    </div>
+  </Section>
+
+  <!-- Contact cards + map -->
+  <Section bg="secondary">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Contact info -->
+      <div class="space-y-6">
+        <Card class="reveal reveal-delay-1">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-(--color-brand)/10 flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-(--color-brand)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-(family-name:--font-heading) font-semibold text-(--color-text-primary) mb-1">Phone</h3>
+              <a href="tel:07907830976" class="text-(--color-text-secondary) hover:text-(--color-brand) transition-colors text-lg">
+                07907 830976
+              </a>
+            </div>
+          </div>
+        </Card>
+
+        <Card class="reveal reveal-delay-2">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-(--color-brand)/10 flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-(--color-brand)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-(family-name:--font-heading) font-semibold text-(--color-text-primary) mb-1">Email</h3>
+              <a href="mailto:dannstarrelectronics@gmail.com" class="text-(--color-text-secondary) hover:text-(--color-brand) transition-colors">
+                dannstarrelectronics@gmail.com
+              </a>
+            </div>
+          </div>
+        </Card>
+
+        <Card class="reveal reveal-delay-3">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-(--color-brand)/10 flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-(--color-brand)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-(family-name:--font-heading) font-semibold text-(--color-text-primary) mb-1">Address</h3>
+              <p class="text-(--color-text-secondary)">61 Rotten Row<br />Pinchbeck<br />PE11 3RQ</p>
+            </div>
+          </div>
+        </Card>
+
+        <Card class="reveal reveal-delay-4">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-(--color-brand)/10 flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-(--color-brand)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-(family-name:--font-heading) font-semibold text-(--color-text-primary) mb-1">Opening Hours</h3>
+              <div class="text-(--color-text-secondary) text-sm space-y-1">
+                <p>Monday - Friday: 10:00 - 18:00</p>
+                <p>Saturday: 10:00 - 15:00</p>
+                <p>Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        <div class="reveal">
+          <Button
+            href="https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
+            variant="primary"
+            size="lg"
+            external
+            pulse
+            class="w-full justify-center"
+          >
+            Book a Repair Online
+          </Button>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="reveal reveal-delay-2">
+        <div class="rounded-xl overflow-hidden shadow-lg h-full min-h-[400px]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.5!2d-0.1875!3d52.8167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d7e8a1f7e5b5e7%3A0x4d3b4a1f7e5b5e7!2s61+Rotten+Row%2C+Pinchbeck%2C+Spalding+PE11+3RQ!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
+            width="100%"
+            height="100%"
+            style="border:0; min-height: 400px;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="DannStarr Electronics location on Google Maps"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </Section>
+</PageLayout>

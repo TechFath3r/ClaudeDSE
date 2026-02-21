@@ -1,0 +1,149 @@
+---
+import { Image } from 'astro:assets';
+import PageLayout from '../layouts/PageLayout.astro';
+import Section from '../components/shared/Section.astro';
+import Card from '../components/shared/Card.astro';
+import meImage from '../assets/images/me-square.png';
+import helenImage from '../assets/images/helen-square.png';
+import workshopImage from '../assets/images/workshop.jpg';
+---
+
+<PageLayout
+  title="About Us"
+  description="Meet the team behind DannStarr Electronics. A family-run tech repair and web design business in Pinchbeck, Spalding."
+>
+  <!-- Hero -->
+  <Section>
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <h1 class="font-(family-name:--font-heading) text-4xl sm:text-5xl font-extrabold text-(--color-text-primary) mb-4">
+        About <span class="text-(--color-brand)">Us</span>
+      </h1>
+      <p class="text-(--color-text-secondary) text-lg">
+        We're a friendly, family-run tech business in the heart of Pinchbeck. No corporate nonsense — just honest advice, quality repairs, and a genuine love for technology.
+      </p>
+    </div>
+  </Section>
+
+  <!-- Our Story -->
+  <Section bg="secondary">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <h2 class="font-(family-name:--font-heading) text-3xl font-bold text-(--color-text-primary) mb-6">Our Story</h2>
+        <div class="space-y-4 text-(--color-text-secondary) text-lg leading-relaxed">
+          <p>
+            DannStarr Electronics started with a simple idea: to provide Pinchbeck and the surrounding area with honest, affordable tech repair services — without the faceless approach of the big chains.
+          </p>
+          <p>
+            What began as fixing phones and laptops for friends and neighbours quickly grew into a trusted local business. Over the years, we've repaired thousands of devices and built lasting relationships with our customers.
+          </p>
+          <p>
+            Today, we've expanded into web design too, helping local businesses get online with modern, professional websites. But our core values haven't changed — we still treat every customer like a neighbour, because that's exactly what they are.
+          </p>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <Image
+          src={workshopImage}
+          alt="DannStarr Electronics workshop"
+          class="rounded-xl shadow-lg w-full"
+          widths={[400, 600, 800]}
+          sizes="(max-width: 1024px) 100vw, 50vw"
+        />
+      </div>
+    </div>
+  </Section>
+
+  <!-- Team -->
+  <Section>
+    <div class="text-center mb-12 reveal">
+      <h2 class="font-(family-name:--font-heading) text-3xl font-bold text-(--color-text-primary) mb-4">
+        Meet the Team
+      </h2>
+      <p class="text-(--color-text-secondary) text-lg max-w-2xl mx-auto">
+        A small team with big passion for technology and helping people.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <!-- Helen -->
+      <Card class="reveal reveal-delay-1 text-center">
+        <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-2 ring-(--color-bg-secondary)">
+          <Image
+            src={helenImage}
+            alt="Helen - Administration & Customer Care"
+            class="w-full h-full object-cover scale-135"
+            width={256}
+            height={256}
+          />
+        </div>
+        <h3 class="font-(family-name:--font-heading) text-xl font-bold text-(--color-text-primary) mb-1">Helen</h3>
+        <p class="text-(--color-brand) font-medium text-sm mb-3">Administration & Customer Care</p>
+        <p class="text-sm text-(--color-text-secondary)">
+          The friendly voice behind the scenes. Helen keeps everything running smoothly, from managing bookings to ensuring every customer gets the warm welcome they deserve.
+        </p>
+      </Card>
+
+      <!-- Dan -->
+      <Card class="reveal reveal-delay-2 text-center">
+        <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-2 ring-(--color-bg-secondary)">
+          <Image
+            src={meImage}
+            alt="Dan - Owner & Lead Technician"
+            class="w-full h-full object-cover object-[25%_top, 20%_left] scale-125"
+            width={256}
+            height={256}
+          />
+        </div>
+        <h3 class="font-(family-name:--font-heading) text-xl font-bold text-(--color-text-primary) mb-1">Dan</h3>
+        <p class="text-(--color-brand) font-medium text-sm mb-3">Owner & Lead Technician</p>
+        <p class="text-sm text-(--color-text-secondary)">
+          Tech enthusiast, problem solver, and self-confessed gadget geek. Dan has been taking things apart and putting them back together since he was a kid. Now he does it professionally — and he's pretty good at it.
+        </p>
+      </Card>
+    </div>
+  </Section>
+
+  <!-- Values -->
+  <Section bg="secondary">
+    <div class="text-center mb-12 reveal">
+      <h2 class="font-(family-name:--font-heading) text-3xl font-bold text-(--color-text-primary) mb-4">
+        What We Stand For
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {[
+        {
+          title: 'Honest Pricing',
+          desc: 'No hidden fees, no surprises. You see the price before we start.',
+          icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+        },
+        {
+          title: 'Quality Parts',
+          desc: "We use quality components and stand behind every repair we do.",
+          icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+        },
+        {
+          title: 'Fast Service',
+          desc: 'Most repairs completed same day. We know you need your device back.',
+          icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+        },
+        {
+          title: 'Community First',
+          desc: "We're part of this community. Our customers aren't numbers — they're neighbours.",
+          icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z',
+        },
+      ].map((value, i) => (
+        <Card class={`reveal reveal-delay-${i + 1} text-center`}>
+          <div class="w-12 h-12 mx-auto mb-4 rounded-lg bg-(--color-brand)/10 flex items-center justify-center">
+            <svg class="w-6 h-6 text-(--color-brand)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={value.icon} />
+            </svg>
+          </div>
+          <h3 class="font-(family-name:--font-heading) font-semibold text-(--color-text-primary) mb-2">{value.title}</h3>
+          <p class="text-sm text-(--color-text-secondary)">{value.desc}</p>
+        </Card>
+      ))}
+    </div>
+  </Section>
+</PageLayout>

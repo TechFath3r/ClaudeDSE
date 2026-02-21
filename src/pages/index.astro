@@ -1,0 +1,55 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Hero from '../components/home/Hero.astro';
+import ContactBar from '../components/home/ContactBar.astro';
+import OpeningTimes from '../components/home/OpeningTimes.astro';
+import ServiceHighlights from '../components/home/ServiceHighlights.astro';
+import Testimonials from '../components/home/Testimonials.astro';
+import CTABanner from '../components/home/CTABanner.astro';
+import BlogPreview from '../components/home/BlogPreview.astro';
+import Section from '../components/shared/Section.astro';
+---
+
+<PageLayout title="Home">
+  <Hero />
+  <ContactBar />
+
+  <!-- Opening times + quick info -->
+  <Section>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <div class="reveal">
+        <h2 class="font-(family-name:--font-heading) text-3xl sm:text-4xl font-bold text-(--color-text-primary) mb-4">
+          Your Local Tech Experts
+        </h2>
+        <p class="text-(--color-text-secondary) text-lg mb-6 leading-relaxed">
+          We're a friendly, independent repair shop based in the heart of Pinchbeck. Whether you've cracked your phone screen, need a laptop fixed, or want a professional website for your business — we're here to help.
+        </p>
+        <p class="text-(--color-text-secondary) text-lg mb-6 leading-relaxed">
+          With years of experience and a passion for technology, we provide fast, affordable repairs with a personal touch. No corporate runaround, just honest advice and quality work from people who care.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-lg bg-(--color-brand) px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-(--color-brand-hover) pulse-cta"
+          >
+            Book a Repair
+          </a>
+          <a
+            href="/services"
+            class="inline-flex items-center gap-2 rounded-lg border-2 border-(--color-brand) px-6 py-3 text-sm font-semibold text-(--color-brand) transition-all hover:bg-(--color-brand) hover:text-white"
+          >
+            View Our Pricing
+          </a>
+        </div>
+      </div>
+      <OpeningTimes />
+    </div>
+  </Section>
+
+  <ServiceHighlights />
+  <Testimonials />
+  <CTABanner />
+  <BlogPreview />
+</PageLayout>

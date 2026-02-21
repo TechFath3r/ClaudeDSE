@@ -1,0 +1,78 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/images/DSLogo.png';
+import ThemeToggle from './ThemeToggle.astro';
+import MobileMenu from './MobileMenu.astro';
+
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 frosted bg-(--color-bg-primary)/80 border-b border-(--color-bg-secondary)">
+  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 shrink-0">
+        <Image src={logo} alt="DannStarr Electronics" width={40} height={40} class="rounded" />
+        <span class="font-(family-name:--font-heading) text-lg font-bold text-(--color-text-primary) hidden sm:block">
+          DannStarr<span class="text-(--color-brand)"> Electronics</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-6">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'nav-link text-sm font-medium transition-colors',
+              currentPath === link.href
+                ? 'text-(--color-brand)'
+                : 'text-(--color-text-secondary) hover:text-(--color-text-primary)',
+            ]}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Right side: Theme toggle + CTA + Mobile menu -->
+      <div class="flex items-center gap-3">
+        <ThemeToggle />
+
+        <a
+          href="https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden sm:inline-flex items-center gap-2 rounded-lg bg-(--color-brand) px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-(--color-brand-hover) pulse-cta"
+        >
+          Book a Repair
+        </a>
+
+        <!-- Mobile hamburger (animated) -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden relative w-10 h-10 flex items-center justify-center text-(--color-text-primary) hover:text-(--color-brand) transition-colors"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line top-[13px]"></span>
+          <span class="hamburger-line top-[19px]"></span>
+          <span class="hamburger-line top-[25px]"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <MobileMenu links={navLinks} currentPath={currentPath} />
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-16"></div>

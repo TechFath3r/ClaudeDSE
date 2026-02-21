@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../../assets/images/hero-girl-phone.jpg';
+import Button from '../shared/Button.astro';
+---
+
+<section class="relative min-h-[90vh] flex items-center overflow-hidden">
+  <!-- Background image -->
+  <div class="absolute inset-0">
+    <Image
+      src={heroImage}
+      alt=""
+      class="w-full h-full object-cover"
+      widths={[640, 1024, 1536, 2048]}
+      sizes="100vw"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+    <div class="max-w-2xl">
+      <p class="text-(--color-brand) font-semibold text-sm uppercase tracking-wider mb-3 reveal">
+        Pinchbeck's Trusted Tech Experts
+      </p>
+      <h1 class="font-(family-name:--font-heading) text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 reveal reveal-delay-1">
+        Professional Device Repairs
+        <span class="text-(--color-brand)"> & Web Design</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed reveal reveal-delay-2">
+        Fast, affordable repairs for phones, tablets, laptops and more. Plus bespoke websites built to grow your business. Friendly, local service you can trust.
+      </p>
+      <div class="flex flex-wrap gap-4 reveal reveal-delay-3">
+        <Button
+          href="https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
+          variant="primary"
+          size="lg"
+          external
+          pulse
+        >
+          Book a Repair
+        </Button>
+        <Button href="/services" variant="outline" size="lg" class="border-white text-white hover:bg-white hover:text-gray-900">
+          View Pricing
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>

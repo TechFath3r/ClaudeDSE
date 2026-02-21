@@ -1,0 +1,28 @@
+---
+import Button from '../shared/Button.astro';
+---
+
+<section class="bg-(--color-brand) py-16 reveal">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="font-(family-name:--font-heading) text-3xl sm:text-4xl font-bold text-white mb-4">
+      Need a Repair?
+    </h2>
+    <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">
+      Book online in just a few clicks, or give us a call. Most repairs completed same day with a full warranty.
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <Button
+        href="https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
+        variant="secondary"
+        size="lg"
+        external
+        class="bg-white text-(--color-brand) hover:bg-gray-100"
+      >
+        Book Online Now
+      </Button>
+      <Button href="tel:07907830976" variant="outline" size="lg" class="border-white text-white hover:bg-white/10">
+        Call 07907 830976
+      </Button>
+    </div>
+  </div>
+</section>

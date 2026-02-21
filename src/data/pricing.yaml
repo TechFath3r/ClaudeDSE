@@ -1,0 +1,292 @@
+categories:
+  - name: "iPhone Screen Repairs"
+    icon: "phone"
+    description: "Professional iPhone screen replacements with quality parts and warranty"
+    tiered: true
+    items:
+      - model: "iPhone 16 Pro Max"
+        budget: 89.99
+        premium: 129.99
+      - model: "iPhone 16 Pro"
+        budget: 79.99
+        premium: 119.99
+      - model: "iPhone 16 Plus"
+        budget: 74.99
+        premium: 109.99
+      - model: "iPhone 16"
+        budget: 69.99
+        premium: 99.99
+      - model: "iPhone 15 Pro Max"
+        budget: 79.99
+        premium: 119.99
+      - model: "iPhone 15 Pro"
+        budget: 69.99
+        premium: 109.99
+      - model: "iPhone 15 Plus"
+        budget: 64.99
+        premium: 99.99
+      - model: "iPhone 15"
+        budget: 59.99
+        premium: 89.99
+      - model: "iPhone 14 Pro Max"
+        budget: 69.99
+        premium: 109.99
+      - model: "iPhone 14 Pro"
+        budget: 64.99
+        premium: 99.99
+      - model: "iPhone 14 Plus"
+        budget: 54.99
+        premium: 84.99
+      - model: "iPhone 14"
+        budget: 49.99
+        premium: 79.99
+      - model: "iPhone 13 Pro Max"
+        budget: 59.99
+        premium: 89.99
+      - model: "iPhone 13 Pro"
+        budget: 54.99
+        premium: 84.99
+      - model: "iPhone 13"
+        budget: 44.99
+        premium: 69.99
+      - model: "iPhone 12 Pro Max"
+        budget: 49.99
+        premium: 79.99
+      - model: "iPhone 12 Pro"
+        budget: 44.99
+        premium: 69.99
+      - model: "iPhone 12"
+        budget: 39.99
+        premium: 64.99
+      - model: "iPhone 11 Pro Max"
+        budget: 44.99
+        premium: 69.99
+      - model: "iPhone 11 Pro"
+        budget: 39.99
+        premium: 64.99
+      - model: "iPhone 11"
+        budget: 34.99
+        premium: 54.99
+      - model: "iPhone XS Max"
+        budget: 39.99
+        premium: 59.99
+      - model: "iPhone XS"
+        budget: 34.99
+        premium: 54.99
+      - model: "iPhone XR"
+        budget: 29.99
+        premium: 49.99
+      - model: "iPhone X"
+        budget: 29.99
+        premium: 49.99
+      - model: "iPhone SE (3rd Gen)"
+        budget: 29.99
+        premium: 44.99
+      - model: "iPhone SE (2nd Gen)"
+        budget: 24.99
+        premium: 39.99
+    tierLabels:
+      budget: "Budget"
+      premium: "Premium"
+    tierDescriptions:
+      budget: "Quality aftermarket screen - perfect for most users"
+      premium: "OEM-quality display with True Tone support"
+
+  - name: "Samsung Screen Repairs"
+    icon: "phone"
+    description: "Samsung Galaxy screen replacements for all major models"
+    tiered: true
+    items:
+      - model: "Galaxy S24 Ultra"
+        budget: 99.99
+        premium: 159.99
+      - model: "Galaxy S24+"
+        budget: 79.99
+        premium: 129.99
+      - model: "Galaxy S24"
+        budget: 69.99
+        premium: 109.99
+      - model: "Galaxy S23 Ultra"
+        budget: 89.99
+        premium: 149.99
+      - model: "Galaxy S23+"
+        budget: 69.99
+        premium: 119.99
+      - model: "Galaxy S23"
+        budget: 59.99
+        premium: 99.99
+      - model: "Galaxy S22 Ultra"
+        budget: 79.99
+        premium: 129.99
+      - model: "Galaxy S22+"
+        budget: 59.99
+        premium: 99.99
+      - model: "Galaxy S22"
+        budget: 49.99
+        premium: 89.99
+      - model: "Galaxy S21 Series"
+        budget: 44.99
+        premium: 79.99
+      - model: "Galaxy A Series"
+        budget: 29.99
+        premium: 59.99
+    tierLabels:
+      budget: "Budget"
+      premium: "Premium"
+    tierDescriptions:
+      budget: "Quality aftermarket AMOLED screen"
+      premium: "OEM-quality Samsung display"
+
+  - name: "iPad Screen Repairs"
+    icon: "tablet"
+    description: "iPad screen and digitiser replacements"
+    tiered: false
+    items:
+      - model: "iPad Pro 12.9\" (6th Gen)"
+        price: 149.99
+      - model: "iPad Pro 12.9\" (5th Gen)"
+        price: 129.99
+      - model: "iPad Pro 11\" (4th Gen)"
+        price: 119.99
+      - model: "iPad Pro 11\" (3rd Gen)"
+        price: 99.99
+      - model: "iPad Air (5th Gen)"
+        price: 89.99
+      - model: "iPad Air (4th Gen)"
+        price: 79.99
+      - model: "iPad (10th Gen)"
+        price: 69.99
+      - model: "iPad (9th Gen)"
+        price: 54.99
+      - model: "iPad (8th/7th Gen)"
+        price: 49.99
+      - model: "iPad Mini (6th Gen)"
+        price: 79.99
+      - model: "iPad Mini (5th Gen)"
+        price: 59.99
+
+  - name: "Battery Replacements"
+    icon: "battery"
+    description: "Restore your device's battery life with a quality replacement"
+    tiered: false
+    items:
+      - model: "iPhone (any model)"
+        price: 34.99
+      - model: "Samsung Galaxy S Series"
+        price: 39.99
+      - model: "Samsung Galaxy A Series"
+        price: 34.99
+      - model: "iPad (any model)"
+        price: 54.99
+
+  - name: "Charging Port Repairs"
+    icon: "plug"
+    description: "Fix charging issues with a new port replacement"
+    tiered: false
+    items:
+      - model: "iPhone (Lightning)"
+        price: 39.99
+      - model: "iPhone 15+ (USB-C)"
+        price: 44.99
+      - model: "Samsung Galaxy"
+        price: 39.99
+      - model: "iPad"
+        price: 54.99
+
+  - name: "Back Glass Repairs"
+    icon: "shield"
+    description: "Cracked back glass? We'll replace it good as new"
+    tiered: false
+    items:
+      - model: "iPhone 15/16 Series"
+        price: 44.99
+      - model: "iPhone 12/13/14 Series"
+        price: 39.99
+      - model: "iPhone 11 Series"
+        price: 34.99
+      - model: "Samsung Galaxy S Series"
+        price: 39.99
+
+  - name: "Camera Repairs"
+    icon: "camera"
+    description: "Front and rear camera replacements"
+    tiered: false
+    items:
+      - model: "iPhone Rear Camera"
+        price: 54.99
+      - model: "iPhone Front Camera"
+        price: 39.99
+      - model: "Samsung Rear Camera"
+        price: 49.99
+      - model: "Samsung Front Camera"
+        price: 34.99
+
+  - name: "Water Damage"
+    icon: "droplet"
+    description: "Professional water damage assessment and repair"
+    tiered: false
+    items:
+      - model: "Diagnostic & Assessment"
+        price: 19.99
+      - model: "Phone Ultrasonic Clean"
+        price: 39.99
+      - model: "Tablet Ultrasonic Clean"
+        price: 49.99
+    note: "Water damage repair success varies by severity. Diagnostic fee waived if repair is carried out."
+
+  - name: "Software & Data"
+    icon: "code"
+    description: "Software fixes, data recovery and transfers"
+    tiered: false
+    items:
+      - model: "Software Troubleshoot"
+        price: 24.99
+      - model: "Data Recovery (Phone)"
+        price: 39.99
+      - model: "Data Recovery (Hard Drive)"
+        price: 49.99
+      - model: "Data Transfer"
+        price: 24.99
+      - model: "Full Phone Setup"
+        price: 19.99
+
+  - name: "MacBook & Laptop"
+    icon: "laptop"
+    description: "MacBook and laptop repairs - screens, keyboards, and more"
+    tiered: false
+    items:
+      - model: "MacBook Screen Replacement"
+        price: 199.99
+      - model: "Laptop Screen Replacement"
+        price: 79.99
+      - model: "MacBook Battery"
+        price: 99.99
+      - model: "Laptop Battery"
+        price: 49.99
+      - model: "MacBook Keyboard"
+        price: 129.99
+      - model: "Laptop Keyboard"
+        price: 54.99
+      - model: "SSD Upgrade"
+        price: 49.99
+      - model: "RAM Upgrade"
+        price: 29.99
+    note: "Laptop prices vary by model. Contact us for an exact quote."
+
+webDesign:
+  title: "Bespoke Web Design & Management"
+  description: "We don't just fix devices - we build beautiful, modern websites too. From simple landing pages to full business sites, we create fast, mobile-friendly websites tailored to your needs."
+  startingPrice: 250
+  features:
+    - title: "Custom Design"
+      description: "Unique designs tailored to your brand - no cookie-cutter templates"
+    - title: "Mobile Responsive"
+      description: "Looks perfect on phones, tablets, and desktops"
+    - title: "SEO Optimised"
+      description: "Built to rank well in Google and drive traffic to your business"
+    - title: "Fast Loading"
+      description: "Optimised for speed - because nobody likes a slow website"
+    - title: "Ongoing Management"
+      description: "We can manage updates, hosting, and maintenance for you"
+    - title: "Affordable Pricing"
+      description: "Professional websites starting from just £250"

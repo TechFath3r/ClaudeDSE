@@ -1,0 +1,55 @@
+---
+import Section from '../shared/Section.astro';
+
+const testimonials = [
+  {
+    name: 'Sarah M.',
+    text: "Absolutely brilliant service! Dann fixed my iPhone screen in under an hour. Friendly, professional, and very reasonably priced. Wouldn't go anywhere else!",
+    service: 'iPhone Screen Repair',
+    rating: 5,
+  },
+  {
+    name: 'James T.',
+    text: "Brought my laptop in with a virus issue and Dann had it sorted the same day. Really knowledgeable and explains everything in plain English. Highly recommend!",
+    service: 'Laptop Repair',
+    rating: 5,
+  },
+  {
+    name: 'Linda P.',
+    text: 'DannStarr built us a beautiful website for our small business. Professional, modern, and they even help us manage it. Fantastic value for money.',
+    service: 'Web Design',
+    rating: 5,
+  },
+];
+---
+
+<Section>
+  <div class="text-center mb-12 reveal">
+    <h2 class="font-(family-name:--font-heading) text-3xl sm:text-4xl font-bold text-(--color-text-primary) mb-4">
+      What Our Customers Say
+    </h2>
+    <p class="text-(--color-text-secondary) text-lg max-w-2xl mx-auto">
+      We're proud to be Pinchbeck's most trusted tech repair shop. Here's what our customers think.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {testimonials.map((t, i) => (
+      <div class={`rounded-xl border border-(--color-bg-secondary) bg-(--color-bg-primary) p-6 shadow-sm reveal reveal-delay-${i + 1}`}>
+        <!-- Stars -->
+        <div class="flex gap-1 mb-3">
+          {Array.from({ length: t.rating }).map(() => (
+            <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          ))}
+        </div>
+        <p class="text-(--color-text-secondary) mb-4 italic">"{t.text}"</p>
+        <div class="flex items-center justify-between">
+          <span class="font-semibold text-sm text-(--color-text-primary)">{t.name}</span>
+          <span class="text-xs text-(--color-brand) bg-(--color-brand)/10 px-2 py-1 rounded-full">{t.service}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+</Section>
