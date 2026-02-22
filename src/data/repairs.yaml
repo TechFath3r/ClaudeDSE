@@ -417,7 +417,6 @@ categories:
       - name: "iPhone 15 Plus"
         slug: "iphone-15-plus"
         repairs:
-          repairs:
           - name: "Screen Replacement"
             description: "Professional screen replacement with warranty"
             tiers:
@@ -1022,7 +1021,7 @@ categories:
                 price: "95"
           - name: "Ear Piece Replacement"
             description: "Can't hear people during calls?"
-            price: £65
+            price: "65"
           - name: "Charging Port Repair"
             description: "USB-C charging port replacement"
             tiers:
