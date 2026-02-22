@@ -48,7 +48,7 @@ categories:
                 price: "110"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "69"
@@ -106,7 +106,7 @@ categories:
                 price: "110"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "72"
@@ -164,7 +164,7 @@ categories:
                 price: "110"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "72"
@@ -224,7 +224,7 @@ categories:
                 price: "110"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "69"
@@ -284,7 +284,7 @@ categories:
                 price: "110"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "69"
@@ -342,7 +342,7 @@ categories:
                 price: "110"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "69"
@@ -400,7 +400,7 @@ categories:
                 price: "110"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "69"
@@ -460,7 +460,7 @@ categories:
                 price: "100"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "69"
@@ -520,7 +520,7 @@ categories:
                 price: "100"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "69"
@@ -578,7 +578,7 @@ categories:
                 price: "90"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "69"
@@ -636,7 +636,7 @@ categories:
                 price: "90"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "69"
@@ -694,7 +694,7 @@ categories:
                 price: "90"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "69"
@@ -752,7 +752,7 @@ categories:
                 price: "90"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "69"
@@ -810,7 +810,7 @@ categories:
                 price: "90"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "69"
@@ -868,7 +868,7 @@ categories:
                 price: "90"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "69"
@@ -926,7 +926,65 @@ categories:
                 price: "85"
             # quote: true
           - name: "Rear Camera Lens Replacement"
+            description: "Camera glass replacement"
+            tiers:
+              - label: "Real Sapphire"
+                price: "65"
+              - label: "Aftermarket"
+                price: "35"
+            # quote: true
+          - name: "Water Damage Assessment"
+            description: "Professional assessment and repair"
+            quote: true
+          - name: "Other faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "iPhone 13 Mini"
+        slug: "iphone-13-mini"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Professional screen replacement with warranty"
+            tiers:
+              - label: "Budget LCD"
+                price: "85"
+              - label: "Premium Soft OLED"
+                price: "125"
+              - label: "Official Apple Screen"
+                price: "275"
+          - name: "Battery Replacement"
+            description: "Restore your battery life"
+            tiers:
+              - label: "Plus"
+                price: "65"
+              - label: "Premium Aftermarket"
+                price: "75"
+              - label: "Official Apple Battery"
+                price: "95"
+          - name: "Charging Port Repair"
+            description: "USB-C charging port replacement"
+            tiers:
+              - label: "Repair existing port"
+                price: "35"
+              - label: "Port Replacement - Premium Aftermarket"
+                price: "75"
+          - name: "Back Glass Repair"
+            description: "Rear glass replacement"
+            tiers:
+              - label: "Glass Replacement"
+                price: "85"
+              - label: "Used Original Chassis Replacement"
+                price: "140"
+          - name: "Rear Camera Repair"
             description: "Camera module replacement"
+            tiers:
+              - label: "New original camera"
+                price: "199"
+              - label: "Used original camera"
+                price: "85"
+            # quote: true
+          - name: "Rear Camera Lens Replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "65"
@@ -984,7 +1042,7 @@ categories:
                 price: "90"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "65"
@@ -1009,7 +1067,7 @@ categories:
               - label: "Premium Soft OLED"
                 price: "150"
               - label: "Official Apple Screen"
-                price: "355"
+                price: "300"
           - name: "Battery Replacement"
             description: "Restore your battery life"
             tiers:
@@ -1045,7 +1103,7 @@ categories:
                 price: "90"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera module replacement"
+            description: "Camera glass replacement"
             tiers:
               - label: "Real Sapphire"
                 price: "65"
@@ -1065,24 +1123,118 @@ categories:
           - name: "Screen Replacement"
             description: "Professional screen replacement with warranty"
             tiers:
-              - label: "Budget"
-                price: "TBA"
-              - label: "Premium"
-                price: "TBA"
+              - label: "Budget LCD"
+                price: "95"
+              - label: "Premium Soft OLED"
+                price: "150"
+              - label: "Official Apple Screen"
+                price: "300"
           - name: "Battery Replacement"
             description: "Restore your battery life"
-            price: "TBA"
+            tiers:
+              - label: "Plus"
+                price: "65"
+              - label: "Premium Aftermarket"
+                price: "75"
+              - label: "Official Apple Battery"
+                price: "95"
+          - name: "Ear Piece Replacement"
+            description: "Can't hear people during calls?"
+            price: "65"
           - name: "Charging Port Repair"
-            description: "Lightning charging port replacement"
-            price: "TBA"
+            description: "USB-C charging port replacement"
+            tiers:
+              - label: "Repair existing port"
+                price: "35"
+              - label: "Port Replacement - Premium Aftermarket"
+                price: "75"
           - name: "Back Glass Repair"
             description: "Rear glass replacement"
-            price: "TBA"
-          - name: "Camera Repair"
-            description: "Front or rear camera replacement"
-            quote: true
+            tiers:
+              - label: "Glass Replacement"
+                price: "85"
+              - label: "Used Original Chassis Replacement"
+                price: "145"
+          - name: "Rear Camera Repair"
+            description: "Camera module replacement"
+            tiers:
+              - label: "New original camera"
+                price: "199"
+              - label: "Used original camera"
+                price: "85"
+            # quote: true
+          - name: "Rear Camera Lens Replacement"
+            description: "Camera glass replacement"
+            tiers:
+              - label: "Real Sapphire"
+                price: "65"
+              - label: "Aftermarket"
+                price: "35"
+            # quote: true
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
+            quote: true
+          - name: "Other faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "iPhone 12 Mini"
+        slug: "iphone-12-mini"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Professional screen replacement with warranty"
+            tiers:
+              - label: "Budget LCD"
+                price: "85"
+              - label: "Refurbished Original"
+                price: "145"
+              - label: "Official Apple Screen"
+                price: "250"
+          - name: "Battery Replacement"
+            description: "Restore your battery life"
+            tiers:
+              - label: "Premium Aftermarket"
+                price: "65"
+              - label: "Official Apple Battery"
+                price: "95"
+          - name: "Ear Piece Replacement"
+            description: "Can't hear people during calls?"
+            price: "65"
+          - name: "Charging Port Repair"
+            description: "USB-C charging port replacement"
+            tiers:
+              - label: "Repair existing port"
+                price: "35"
+              - label: "Port Replacement - Premium Aftermarket"
+                price: "65"
+          - name: "Back Glass Repair"
+            description: "Rear glass replacement"
+            tiers:
+              - label: "Glass Replacement"
+                price: "75"
+              - label: "Used Original Chassis Replacement"
+                price: "135"
+          - name: "Rear Camera Repair"
+            description: "Camera module replacement"
+            tiers:
+              - label: "New original camera"
+                price: "199"
+              - label: "Used original camera"
+                price: "85"
+            # quote: true
+          - name: "Rear Camera Lens Replacement"
+            description: "Camera glass replacement"
+            tiers:
+              - label: "Real Sapphire"
+                price: "65"
+              - label: "Aftermarket"
+                price: "35"
+            # quote: true
+          - name: "Water Damage Assessment"
+            description: "Professional assessment and repair"
+            quote: true
+          - name: "Other faults"
+            description: "Diagnostic and repair for other issues"
             quote: true
 
       - name: "iPhone 11 Pro Max"
@@ -1091,24 +1243,49 @@ categories:
           - name: "Screen Replacement"
             description: "Professional screen replacement with warranty"
             tiers:
-              - label: "Budget"
-                price: "TBA"
-              - label: "Premium"
-                price: "TBA"
+              - label: "Budget LCD"
+                price: "75"
+              - label: "Premium Soft OLED"
+                price: "105"
+              - label: "Refurbished Original"
+                price: "145"
           - name: "Battery Replacement"
             description: "Restore your battery life"
-            price: "TBA"
+            price: "70"
+          - name: "Ear Piece Replacement"
+            description: "Can't hear people during calls?"
+            price: "55"
           - name: "Charging Port Repair"
-            description: "Lightning charging port replacement"
-            price: "TBA"
+            description: "USB-C charging port replacement"
+            tiers:
+              - label: "Repair existing port"
+                price: "35"
+              - label: "Port Replacement - Premium Aftermarket"
+                price: "75"
           - name: "Back Glass Repair"
             description: "Rear glass replacement"
-            price: "TBA"
-          - name: "Camera Repair"
-            description: "Front or rear camera replacement"
-            quote: true
+            tiers:
+              - label: "Glass Replacement"
+                price: "85"
+              - label: "Used Original Chassis Replacement"
+                price: "140"
+          - name: "Rear Camera Repair"
+            description: "Camera module replacement"
+            price: "80"
+            # quote: true
+          - name: "Rear Camera Lens Replacement"
+            description: "Camera glass replacement"
+            tiers:
+              - label: "Real Sapphire"
+                price: "65"
+              - label: "Aftermarket"
+                price: "35"
+            # quote: true
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
+            quote: true
+          - name: "Other faults"
+            description: "Diagnostic and repair for other issues"
             quote: true
 
       - name: "iPhone 11 Pro"
@@ -1117,24 +1294,49 @@ categories:
           - name: "Screen Replacement"
             description: "Professional screen replacement with warranty"
             tiers:
-              - label: "Budget"
-                price: "TBA"
-              - label: "Premium"
-                price: "TBA"
+              - label: "Budget LCD"
+                price: "75"
+              - label: "Premium Soft OLED"
+                price: "105"
+              - label: "Refurbished Original"
+                price: "145"
           - name: "Battery Replacement"
             description: "Restore your battery life"
-            price: "TBA"
+            price: "70"
+          - name: "Ear Piece Replacement"
+            description: "Can't hear people during calls?"
+            price: "55"
           - name: "Charging Port Repair"
-            description: "Lightning charging port replacement"
-            price: "TBA"
+            description: "USB-C charging port replacement"
+            tiers:
+              - label: "Repair existing port"
+                price: "35"
+              - label: "Port Replacement - Premium Aftermarket"
+                price: "75"
           - name: "Back Glass Repair"
             description: "Rear glass replacement"
-            price: "TBA"
-          - name: "Camera Repair"
-            description: "Front or rear camera replacement"
-            quote: true
+            tiers:
+              - label: "Glass Replacement"
+                price: "85"
+              - label: "Used Original Chassis Replacement"
+                price: "140"
+          - name: "Rear Camera Repair"
+            description: "Camera module replacement"
+            price: "80"
+            # quote: true
+          - name: "Rear Camera Lens Replacement"
+            description: "Camera glass replacement"
+            tiers:
+              - label: "Real Sapphire"
+                price: "65"
+              - label: "Aftermarket"
+                price: "35"
+            # quote: true
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
+            quote: true
+          - name: "Other faults"
+            description: "Diagnostic and repair for other issues"
             quote: true
 
       - name: "iPhone 11"
@@ -1142,21 +1344,50 @@ categories:
         repairs:
           - name: "Screen Replacement"
             description: "Professional screen replacement with warranty"
-            price: "TBA"
+            tiers:
+              - label: "Budget LCD"
+                price: "75"
+              - label: "Premium Soft OLED"
+                price: "105"
+              - label: "Refurbished Original"
+                price: "145"
           - name: "Battery Replacement"
             description: "Restore your battery life"
-            price: "TBA"
+            price: "70"
+          - name: "Ear Piece Replacement"
+            description: "Can't hear people during calls?"
+            price: "50"
           - name: "Charging Port Repair"
-            description: "Lightning charging port replacement"
-            price: "TBA"
+            description: "USB-C charging port replacement"
+            tiers:
+              - label: "Repair existing port"
+                price: "35"
+              - label: "Port Replacement - Premium Aftermarket"
+                price: "75"
           - name: "Back Glass Repair"
             description: "Rear glass replacement"
-            price: "TBA"
-          - name: "Camera Repair"
-            description: "Front or rear camera replacement"
-            quote: true
+            tiers:
+              - label: "Glass Replacement"
+                price: "85"
+              - label: "Used Original Chassis Replacement"
+                price: "140"
+          - name: "Rear Camera Repair"
+            description: "Camera module replacement"
+            price: "75"
+            # quote: true
+          - name: "Rear Camera Lens Replacement"
+            description: "Camera glass replacement"
+            tiers:
+              - label: "Real Sapphire"
+                price: "65"
+              - label: "Aftermarket"
+                price: "35"
+            # quote: true
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
+            quote: true
+          - name: "Other faults"
+            description: "Diagnostic and repair for other issues"
             quote: true
 
       - name: "iPhone XS Max"
@@ -1165,21 +1396,49 @@ categories:
           - name: "Screen Replacement"
             description: "Professional screen replacement with warranty"
             tiers:
-              - label: "Budget"
-                price: "TBA"
-              - label: "Premium"
-                price: "TBA"
+              - label: "Budget LCD"
+                price: "75"
+              - label: "Premium Soft OLED"
+                price: "105"
+              - label: "Refurbished Original"
+                price: "145"
           - name: "Battery Replacement"
             description: "Restore your battery life"
-            price: "TBA"
+            price: "70"
+          - name: "Ear Piece Replacement"
+            description: "Can't hear people during calls?"
+            price: "50"
           - name: "Charging Port Repair"
-            description: "Lightning charging port replacement"
-            price: "TBA"
+            description: "USB-C charging port replacement"
+            tiers:
+              - label: "Repair existing port"
+                price: "35"
+              - label: "Port Replacement - Premium Aftermarket"
+                price: "75"
           - name: "Back Glass Repair"
             description: "Rear glass replacement"
-            price: "TBA"
+            tiers:
+              - label: "Glass Replacement"
+                price: "85"
+              - label: "Used Original Chassis Replacement"
+                price: "140"
+          - name: "Rear Camera Repair"
+            description: "Camera module replacement"
+            price: "75"
+            # quote: true
+          - name: "Rear Camera Lens Replacement"
+            description: "Camera glass replacement"
+            tiers:
+              - label: "Real Sapphire"
+                price: "65"
+              - label: "Aftermarket"
+                price: "35"
+            # quote: true
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
+            quote: true
+          - name: "Other faults"
+            description: "Diagnostic and repair for other issues"
             quote: true
 
       - name: "iPhone XS"
@@ -1800,6 +2059,144 @@ categories:
       - name: "General Diagnostic"
         description: "Full diagnostic and assessment"
         quote: true
+
+  - name: "Game Consoles"
+    slug: "game-consoles"
+    icon: "gamepad"
+    description: "Xbox, PlayStation, and Nintendo Switch repairs"
+    devices:
+      - name: "Xbox Series X"
+        slug: "xbox-series-x"
+        repairs:
+          - name: "HDMI Port Repair"
+            description: "HDMI port replacement"
+            price: "75"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "Xbox Series S"
+        slug: "xbox-series-s"
+        repairs:
+          - name: "HDMI Port Repair"
+            description: "HDMI port replacement"
+            price: "75"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "Xbox One X"
+        slug: "xbox-one-x"
+        repairs:
+          - name: "HDMI Port Repair"
+            description: "HDMI port replacement"
+            price: "75"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "Xbox One S"
+        slug: "xbox-one-s"
+        repairs:
+          - name: "HDMI Port Repair"
+            description: "HDMI port replacement"
+            price: "75"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "Xbox One"
+        slug: "xbox-one"
+        repairs:
+          - name: "HDMI Port Repair"
+            description: "HDMI port replacement"
+            price: "75"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "PlayStation 5"
+        slug: "ps5"
+        repairs:
+          - name: "HDMI Port Repair"
+            description: "HDMI port replacement"
+            price: "75"
+          - name: "Disc Drive Repair"
+            description: "Disc drive replacement or repair"
+            price: "85"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "PlayStation 4 Pro"
+        slug: "ps4-pro"
+        repairs:
+          - name: "HDMI Port Repair"
+            description: "HDMI port replacement"
+            price: "75"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "PlayStation 4 Slim"
+        slug: "ps4-slim"
+        repairs:
+          - name: "HDMI Port Repair"
+            description: "HDMI port replacement"
+            price: "75"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "PlayStation 4"
+        slug: "ps4"
+        repairs:
+          - name: "HDMI Port Repair"
+            description: "HDMI port replacement"
+            price: "75"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "Nintendo Switch"
+        slug: "nintendo-switch"
+        repairs:
+          - name: "Charging Port Repair"
+            description: "USB-C charging port replacement"
+            price: "65"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "Nintendo Switch Lite"
+        slug: "nintendo-switch-lite"
+        repairs:
+          - name: "Charging Port Repair"
+            description: "USB-C charging port replacement"
+            price: "65"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "Nintendo Switch OLED"
+        slug: "nintendo-switch-oled"
+        repairs:
+          - name: "Charging Port Repair"
+            description: "USB-C charging port replacement"
+            price: "65"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "Nintendo Switch 2"
+        slug: "nintendo-switch-2"
+        repairs:
+          - name: "Charging Port Repair"
+            description: "USB-C charging port replacement"
+            price: "85"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
 
   - name: "Software & Data"
     slug: "software-data"
