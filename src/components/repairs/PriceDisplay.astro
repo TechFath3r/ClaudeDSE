@@ -1,0 +1,74 @@
+---
+import Button from '@components/shared/Button.astro';
+
+interface Tier {
+  label: string;
+  price: number | string;
+}
+
+interface Props {
+  price?: number | string;
+  tiers?: Tier[];
+  quote?: boolean;
+}
+
+const { price, tiers, quote } = Astro.props;
+
+function formatPrice(value: number | string): { text: string; style: string } {
+  if (value === 'TBA') return { text: 'TBA', style: 'tba' };
+  if (value === 'FREE') return { text: 'FREE', style: 'free' };
+  if (typeof value === 'number') return { text: `£${value.toFixed(2)}`, style: 'price' };
+  // String that looks like a number
+  const num = parseFloat(String(value));
+  if (!isNaN(num)) return { text: `£${num.toFixed(2)}`, style: 'price' };
+  return { text: String(value), style: 'price' };
+}
+---
+
+{quote ? (
+  <Button
+    href="https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
+    variant="outline"
+    size="sm"
+    external
+  >
+    Get a Quote
+  </Button>
+) : tiers && tiers.length > 0 ? (
+  <div class="space-y-1.5">
+    {tiers.map((tier) => {
+      const formatted = formatPrice(tier.price);
+      return (
+        <div class="flex items-center justify-between gap-3 text-sm">
+          <span class="text-(--color-text-secondary)">{tier.label}</span>
+          {formatted.style === 'tba' ? (
+            <span class="tba-badge inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium">
+              TBA
+            </span>
+          ) : formatted.style === 'free' ? (
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/15 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+              FREE
+            </span>
+          ) : (
+            <span class="font-semibold text-(--color-text-primary)">{formatted.text}</span>
+          )}
+        </div>
+      );
+    })}
+  </div>
+) : price !== undefined ? (
+  (() => {
+    const formatted = formatPrice(price);
+    return formatted.style === 'tba' ? (
+      <span class="tba-badge inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium">
+        TBA
+      </span>
+    ) : formatted.style === 'free' ? (
+      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/15 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+        FREE
+      </span>
+    ) : (
+      <span class="text-lg font-bold text-(--color-text-primary)">{formatted.text}</span>
+    );
+  })()
+) : null}

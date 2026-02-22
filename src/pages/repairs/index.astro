@@ -1,0 +1,116 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import Section from '@components/shared/Section.astro';
+import Card from '@components/shared/Card.astro';
+import Button from '@components/shared/Button.astro';
+import IconSvg from '@components/shared/IconSvg.astro';
+import SearchFilter from '@components/shared/SearchFilter.astro';
+import { getAllCategories, hasDevices } from '@/lib/repairs';
+
+const categories = getAllCategories();
+---
+
+<PageLayout
+  title="Repairs & Pricing"
+  description="Transparent pricing for phone, tablet, and laptop repairs. iPhone screens, Samsung repairs, battery replacements, and more. No hidden fees."
+>
+  <!-- Hero -->
+  <Section>
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <h1 class="font-(family-name:--font-heading) text-4xl sm:text-5xl font-extrabold text-(--color-text-primary) mb-4">
+        Repairs & <span class="text-(--color-brand)">Pricing</span>
+      </h1>
+      <p class="text-(--color-text-secondary) text-lg mb-6">
+        Transparent pricing for all our most common repairs. No hidden fees, no surprises. Can't see your device? Just give us a call for a free quote.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-(--color-text-secondary)">
+        <span class="flex items-center gap-1">
+          <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          No fix, no fee
+        </span>
+        <span class="flex items-center gap-1">
+          <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Warranty included
+        </span>
+        <span class="flex items-center gap-1">
+          <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          Same-day repairs
+        </span>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Category Grid -->
+  <Section bg="secondary">
+    <SearchFilter placeholder="Search categories..." targetSelector="[data-category-card]" />
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {categories.map((category, i) => (
+        <a
+          href={`/repairs/${category.slug}/`}
+          class={`reveal reveal-delay-${(i % 4) + 1}`}
+          data-category-card
+          data-search={category.name + ' ' + category.description}
+        >
+          <Card class="h-full group">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-lg bg-(--color-brand)/10 flex items-center justify-center shrink-0 group-hover:bg-(--color-brand)/20 transition-colors">
+                <IconSvg name={category.icon} class="w-6 h-6 text-(--color-brand)" />
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-1">
+                  <h2 class="font-(family-name:--font-heading) font-semibold text-(--color-text-primary) text-lg">
+                    {category.name}
+                  </h2>
+                  {hasDevices(category) && (
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-(--color-brand)/10 text-(--color-brand)">
+                      {category.devices!.length} models
+                    </span>
+                  )}
+                </div>
+                <p class="text-sm text-(--color-text-secondary) mb-3">{category.description}</p>
+                <span class="inline-flex items-center gap-1 text-sm font-medium text-(--color-brand) group-hover:gap-2 transition-all">
+                  View repairs
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </Card>
+        </a>
+      ))}
+    </div>
+  </Section>
+
+  <!-- CTA Banner -->
+  <section class="bg-(--color-brand) py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-(family-name:--font-heading) text-3xl font-bold text-white mb-4">
+        Can't Find Your Device?
+      </h2>
+      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">
+        These are just our most common repairs. We fix all sorts! Get in touch for a free, no-obligation quote.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <Button
+          href="https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
+          size="lg"
+          external
+          class="!bg-white !text-(--color-brand) hover:!bg-gray-100"
+        >
+          Book a Repair
+        </Button>
+        <Button href="tel:07907830976" variant="outline" size="lg" class="border-white text-white hover:bg-white/10">
+          Call Us
+        </Button>
+      </div>
+    </div>
+  </section>
+</PageLayout>

@@ -42,8 +42,10 @@ social:
 nav:
   - label: "Home"
     href: "/"
-  - label: "Services"
-    href: "/services"
+  - label: "Repairs"
+    href: "/repairs/"
+  - label: "Web Design"
+    href: "/web-design/"
   - label: "Blog"
     href: "/blog"
   - label: "About"

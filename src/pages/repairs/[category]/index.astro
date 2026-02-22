@@ -1,0 +1,143 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import Section from '@components/shared/Section.astro';
+import Card from '@components/shared/Card.astro';
+import Button from '@components/shared/Button.astro';
+import IconSvg from '@components/shared/IconSvg.astro';
+import Breadcrumb from '@components/shared/Breadcrumb.astro';
+import SearchFilter from '@components/shared/SearchFilter.astro';
+import PriceDisplay from '@components/repairs/PriceDisplay.astro';
+import { getAllCategories, hasDevices } from '@/lib/repairs';
+import type { Category } from '@/lib/repairs';
+
+export function getStaticPaths() {
+  const categories = getAllCategories();
+  return categories.map((category) => ({
+    params: { category: category.slug },
+    props: { category },
+  }));
+}
+
+interface Props {
+  category: Category;
+}
+
+const { category } = Astro.props;
+const showDevices = hasDevices(category);
+---
+
+<PageLayout
+  title={`${category.name} Repairs`}
+  description={`${category.description}. Professional repairs with warranty. No fix, no fee.`}
+>
+  <Section>
+    <Breadcrumb items={[
+      { label: 'Repairs', href: '/repairs/' },
+      { label: category.name },
+    ]} />
+
+    <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-(--color-brand)/10 flex items-center justify-center">
+        <IconSvg name={category.icon} class="w-8 h-8 text-(--color-brand)" />
+      </div>
+      <h1 class="font-(family-name:--font-heading) text-4xl sm:text-5xl font-extrabold text-(--color-text-primary) mb-4">
+        {category.name} <span class="text-(--color-brand)">Repairs</span>
+      </h1>
+      <p class="text-(--color-text-secondary) text-lg">
+        {category.description}
+      </p>
+    </div>
+
+    {showDevices ? (
+      <!-- Device grid mode -->
+      <SearchFilter placeholder={`Search ${category.name} models...`} targetSelector="[data-device-card]" />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {category.devices!.map((device, i) => (
+          <a
+            href={`/repairs/${category.slug}/${device.slug}/`}
+            class={`reveal reveal-delay-${(i % 4) + 1}`}
+            data-device-card
+            data-search={device.name}
+          >
+            <Card class="h-full group">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <h2 class="font-(family-name:--font-heading) font-semibold text-(--color-text-primary)">
+                    {device.name}
+                  </h2>
+                  <p class="text-sm text-(--color-text-secondary) mt-1">
+                    {device.repairs.length} repairs available
+                  </p>
+                </div>
+                <svg class="w-5 h-5 text-(--color-text-secondary) group-hover:text-(--color-brand) group-hover:translate-x-0.5 transition-all shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </Card>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <!-- Flat pricing table mode -->
+      <div class="max-w-3xl mx-auto reveal">
+        <div class="overflow-x-auto rounded-xl border border-(--color-bg-secondary) bg-(--color-bg-primary)">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-(--color-bg-secondary)">
+                <th class="text-left py-3 px-4 font-semibold text-(--color-text-primary)">Repair</th>
+                <th class="text-right py-3 px-4 font-semibold text-(--color-text-primary)">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              {category.repairs!.map((repair, i) => (
+                <tr class:list={['border-b border-(--color-bg-secondary)/50 last:border-0', i % 2 === 1 && 'bg-(--color-bg-secondary)/30']}>
+                  <td class="py-4 px-4">
+                    <p class="font-medium text-(--color-text-primary)">{repair.name}</p>
+                    {repair.description && (
+                      <p class="text-xs text-(--color-text-secondary) mt-0.5">{repair.description}</p>
+                    )}
+                  </td>
+                  <td class="text-right py-4 px-4">
+                    <PriceDisplay price={repair.price} tiers={repair.tiers} quote={repair.quote} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {category.note && (
+          <p class="mt-3 text-sm text-(--color-text-secondary) italic">
+            * {category.note}
+          </p>
+        )}
+      </div>
+    )}
+  </Section>
+
+  <!-- CTA Banner -->
+  <section class="bg-(--color-brand) py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-(family-name:--font-heading) text-3xl font-bold text-white mb-4">
+        Can't Find What You Need?
+      </h2>
+      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">
+        We fix all sorts! Get in touch for a free, no-obligation quote.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <Button
+          href="https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
+          size="lg"
+          external
+          class="!bg-white !text-(--color-brand) hover:!bg-gray-100"
+        >
+          Book a Repair
+        </Button>
+        <Button href="tel:07907830976" variant="outline" size="lg" class="border-white text-white hover:bg-white/10">
+          Call Us
+        </Button>
+      </div>
+    </div>
+  </section>
+</PageLayout>

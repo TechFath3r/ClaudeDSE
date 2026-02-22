@@ -19,7 +19,7 @@ const { links, currentPath } = Astro.props;
         href={link.href}
         class:list={[
           'py-3 px-4 rounded-lg text-lg font-medium transition-colors',
-          currentPath === link.href
+          currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
             ? 'text-(--color-brand) bg-(--color-bg-secondary)'
             : 'text-(--color-text-primary) hover:bg-(--color-bg-secondary)',
         ]}

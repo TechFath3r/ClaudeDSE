@@ -19,6 +19,17 @@
   --color-text-secondary: #A1A1A6;
 }
 
+/* TBA price badges */
+.tba-badge {
+  background-color: var(--color-brand);
+  color: #FFFFFF;
+}
+
+.dark .tba-badge {
+  background-color: rgb(120 53 15 / 0.3);
+  color: #fbbf24;
+}
+
 /* Base styles */
 html {
   scroll-behavior: smooth;

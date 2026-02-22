@@ -6,7 +6,8 @@ import MobileMenu from './MobileMenu.astro';
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  // { label: 'Services', href: '/services' },  // Temporarily hidden until pricing is finalised
+  { label: 'Repairs', href: '/repairs/' },
+  { label: 'Web Design', href: '/web-design/' },
   { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
@@ -33,7 +34,7 @@ const currentPath = Astro.url.pathname;
             href={link.href}
             class:list={[
               'nav-link text-sm font-medium transition-colors',
-              currentPath === link.href
+              currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
                 ? 'text-(--color-brand)'
                 : 'text-(--color-text-secondary) hover:text-(--color-text-primary)',
             ]}

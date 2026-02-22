@@ -44,47 +44,43 @@ categories:
         budget: 59.99
         premium: 89.99
       - model: "iPhone 13 Pro"
-        budget: 54.99
-        premium: 84.99
+        soft OLED: 145
+        Offical Apple: 325
       - model: "iPhone 13"
-        budget: 44.99
-        premium: 69.99
+        budget: 85
+        soft OLED: 120
       - model: "iPhone 12 Pro Max"
-        budget: 49.99
-        premium: 79.99
+        soft OLED: 135
+        Official Apple: 300
       - model: "iPhone 12 Pro"
-        budget: 44.99
-        premium: 69.99
+        budget: 85
+        premium: 115
       - model: "iPhone 12"
-        budget: 39.99
-        premium: 64.99
+        budget: 85
+        premium: 115
       - model: "iPhone 11 Pro Max"
-        budget: 44.99
-        premium: 69.99
+        budget: 85
+        premium: 105
       - model: "iPhone 11 Pro"
-        budget: 39.99
-        premium: 64.99
+        budget: 75
+        premium: 95
       - model: "iPhone 11"
-        budget: 34.99
-        premium: 54.99
+        premium: 75
       - model: "iPhone XS Max"
-        budget: 39.99
-        premium: 59.99
+        budget: 75
+        premium: 100
       - model: "iPhone XS"
-        budget: 34.99
-        premium: 54.99
+        budget: 65
+        premium: 95
       - model: "iPhone XR"
-        budget: 29.99
-        premium: 49.99
+        premium: 75
       - model: "iPhone X"
-        budget: 29.99
-        premium: 49.99
+        budget: 65
+        premium: 95
       - model: "iPhone SE (3rd Gen)"
-        budget: 29.99
-        premium: 44.99
+        premium: 65
       - model: "iPhone SE (2nd Gen)"
-        budget: 24.99
-        premium: 39.99
+        premium: 65
     tierLabels:
       budget: "Budget"
       premium: "Premium"

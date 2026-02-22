@@ -1,0 +1,112 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import Section from '@components/shared/Section.astro';
+import Card from '@components/shared/Card.astro';
+import Button from '@components/shared/Button.astro';
+
+const features = [
+  {
+    title: 'Custom Design',
+    description: "Unique designs tailored to your brand - no cookie-cutter templates",
+    icon: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z',
+  },
+  {
+    title: 'Mobile Responsive',
+    description: 'Looks perfect on phones, tablets, and desktops',
+    icon: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z',
+  },
+  {
+    title: 'SEO Optimised',
+    description: 'Built to rank well in Google and drive traffic to your business',
+    icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z',
+  },
+  {
+    title: 'Fast Loading',
+    description: 'Optimised for speed - because nobody likes a slow website',
+    icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+  },
+  {
+    title: 'Ongoing Management',
+    description: 'We can manage updates, hosting, and maintenance for you',
+    icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z',
+  },
+  {
+    title: 'Affordable Pricing',
+    description: 'Professional websites starting from just £250',
+    icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+  },
+];
+---
+
+<PageLayout
+  title="Web Design & Management"
+  description="Bespoke, modern websites built for your business. Fast, mobile-friendly, and SEO-optimised. Professional web design starting from just £250."
+>
+  <!-- Hero -->
+  <Section>
+    <div class="text-center max-w-3xl mx-auto reveal">
+      <h1 class="font-(family-name:--font-heading) text-4xl sm:text-5xl font-extrabold text-(--color-text-primary) mb-4">
+        Bespoke <span class="text-(--color-brand)">Web Design</span> & Management
+      </h1>
+      <p class="text-(--color-text-secondary) text-lg mb-6">
+        We don't just fix devices — we build beautiful, modern websites too. From simple landing pages to full business sites, we create fast, mobile-friendly websites tailored to your needs.
+      </p>
+      <p class="text-3xl font-bold text-(--color-brand) mb-8">
+        Starting from just £250
+      </p>
+      <Button href="/contact" variant="primary" size="lg" pulse>
+        Get a Free Quote
+      </Button>
+    </div>
+  </Section>
+
+  <!-- Features Grid -->
+  <Section bg="secondary">
+    <div class="text-center mb-12 reveal">
+      <h2 class="font-(family-name:--font-heading) text-3xl font-bold text-(--color-text-primary) mb-4">
+        What You Get
+      </h2>
+      <p class="text-(--color-text-secondary) text-lg max-w-2xl mx-auto">
+        Every website we build is crafted with care, optimised for performance, and designed to grow with your business.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map((feature, i) => (
+        <Card class={`reveal reveal-delay-${(i % 4) + 1}`} hover={false}>
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-lg bg-(--color-brand)/10 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-(--color-brand)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={feature.icon} />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-(family-name:--font-heading) font-semibold text-(--color-text-primary) mb-1">{feature.title}</h3>
+              <p class="text-sm text-(--color-text-secondary)">{feature.description}</p>
+            </div>
+          </div>
+        </Card>
+      ))}
+    </div>
+  </Section>
+
+  <!-- CTA Banner -->
+  <section class="bg-(--color-brand) py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-(family-name:--font-heading) text-3xl font-bold text-white mb-4">
+        Ready to Get Started?
+      </h2>
+      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">
+        Whether you need a brand new website or want to refresh your existing one, we'd love to chat. No obligation, just a friendly conversation about what you need.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <Button href="/contact" size="lg" class="!bg-white !text-(--color-brand) hover:!bg-gray-100">
+          Get a Free Quote
+        </Button>
+        <Button href="tel:07907830976" variant="outline" size="lg" class="border-white text-white hover:bg-white/10">
+          Call Us
+        </Button>
+      </div>
+    </div>
+  </section>
+</PageLayout>
