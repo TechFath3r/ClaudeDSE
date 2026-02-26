@@ -65,13 +65,16 @@ const { links, currentPath } = Astro.props;
     setTimeout(updateMenuBg, 50);
   });
 
+  function closeMenu() {
+    menu?.classList.remove('open');
+    btn?.setAttribute('aria-expanded', 'false');
+    menu?.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    btn?.focus();
+  }
+
   // Close on link click
   menu?.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('open');
-      btn?.setAttribute('aria-expanded', 'false');
-      menu.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', closeMenu);
   });
 </script>
