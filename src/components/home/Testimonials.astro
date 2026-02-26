@@ -35,7 +35,7 @@ const testimonials = [
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     {testimonials.map((t, i) => (
-      <div class={`rounded-xl border border-(--color-bg-secondary) bg-(--color-bg-primary) p-6 shadow-sm reveal reveal-delay-${i + 1}`}>
+      <figure class={`rounded-xl border border-(--color-bg-secondary) bg-(--color-bg-primary) p-6 shadow-sm reveal reveal-delay-${i + 1}`}>
         <!-- Stars -->
         <div class="flex gap-1 mb-3">
           {Array.from({ length: t.rating }).map(() => (
@@ -44,12 +44,14 @@ const testimonials = [
             </svg>
           ))}
         </div>
-        <p class="text-(--color-text-secondary) mb-4 italic">"{t.text}"</p>
-        <div class="flex items-center justify-between">
+        <blockquote class="text-(--color-text-secondary) mb-4 italic">
+          <p>"{t.text}"</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-between">
           <span class="font-semibold text-sm text-(--color-text-primary)">{t.name}</span>
           <span class="text-xs text-(--color-brand) bg-(--color-brand)/10 px-2 py-1 rounded-full">{t.service}</span>
-        </div>
-      </div>
+        </figcaption>
+      </figure>
     ))}
   </div>
 </Section>

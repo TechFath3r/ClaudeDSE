@@ -89,6 +89,56 @@ const categories = getAllCategories();
     </div>
   </Section>
 
+  <!-- FAQ Schema -->
+  <script is:inline type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a phone screen repair cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Screen repair prices vary by model. We offer transparent pricing on our website — select your device to see exact costs. All repairs include a warranty."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long do repairs take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most repairs are completed same day, often within an hour. More complex repairs may take longer — we'll always let you know upfront."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer a warranty on repairs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all our repairs come with a warranty. If anything goes wrong with the repair we've done, bring it back and we'll sort it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if you can't fix my device?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We operate a no fix, no fee policy. If we can't repair your device, you don't pay a penny."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to book an appointment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can book online or just pop in during opening hours (Mon-Fri 10:00-18:00, Sat 10:00-15:00). Booking online helps us prepare for your visit."
+          }
+        }
+      ]
+    }
+  </script>
+
   <!-- CTA Banner -->
   <section class="bg-(--color-brand) py-16">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
