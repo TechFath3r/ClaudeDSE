@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 
-const { title, description, date, category, author } = post.data;
+const { title, description, date, category, author, image } = post.data;
 
 const formattedDate = new Date(date).toLocaleDateString('en-GB', {
   day: 'numeric',
@@ -26,7 +26,7 @@ const wordCount = post.body ? post.body.split(/\s+/).length : 0;
 const readingTime = Math.max(1, Math.ceil(wordCount / 200));
 ---
 
-<PageLayout title={title} description={description} article>
+<PageLayout title={title} description={description} ogImage={image} article>
   <Section>
     <article class="max-w-3xl mx-auto">
       <!-- Header -->

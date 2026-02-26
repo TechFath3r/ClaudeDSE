@@ -10,6 +10,7 @@ const blog = defineCollection({
     category: z.string().optional(),
     author: z.string().default('Dann Sherlock'),
     draft: z.boolean().default(false),
+    image: z.string().optional(),
   }),
 });
 
