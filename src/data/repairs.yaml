@@ -828,7 +828,7 @@ categories:
               - label: "Premium Aftermarket"
                 price: "75"
               - label: "Official Apple Battery"
-                price: "95"
+                price: "100"
           - name: "Charging Port Repair"
             description: "Lightning charging port replacement"
             tiers:
