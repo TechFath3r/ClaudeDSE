@@ -1990,6 +1990,31 @@ categories:
             description: "Professional assessment and repair"
             quote: true
 
+      - name: "Galaxy S20 FE"
+        slug: "galaxy-s20-fe"
+        repairs:
+          - name: "Hydrogel Screen Protector"
+            description: "Premium hydrogel screen protection"
+            price: "10"
+          - name: "Screen Replacement"
+            description: "Professional screen replacement with warranty"
+            price: "105"
+          - name: "Battery Replacement"
+            description: "Restore your battery life"
+            price: "TBA"
+          - name: "Charging Port Repair"
+            description: "USB-C charging port replacement"
+            price: "TBA"
+          - name: "Back Glass Repair"
+            description: "Rear glass replacement"
+            price: "TBA"
+          - name: "Camera Repair"
+            description: "Front or rear camera replacement"
+            quote: true
+          - name: "Water Damage Assessment"
+            description: "Professional assessment and repair"
+            quote: true
+
       - name: "Galaxy A Series"
         slug: "galaxy-a-series"
         repairs:
@@ -2510,6 +2535,21 @@ categories:
             description: "Professional assessment and repair"
             quote: true
 
+  - name: "iPod"
+    slug: "ipod"
+    icon: "phone"
+    description: "Battery replacements and repairs for iPod Classic"
+    devices:
+      - name: "iPod Classic (6th & 7th Gen)"
+        slug: "ipod-classic-6th-7th-gen"
+        repairs:
+          - name: "Battery Replacement"
+            description: "Restore your iPod battery life"
+            price: "55"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
   - name: "MacBook"
     slug: "macbook"
     icon: "laptop"
@@ -2661,9 +2701,27 @@ categories:
       - name: "Nintendo Switch"
         slug: "nintendo-switch"
         repairs:
+          - name: "Screen Replacement"
+            description: "Professional screen replacement"
+            price: "89"
+          - name: "Battery Replacement"
+            description: "Restore your battery life"
+            price: "55"
           - name: "Charging Port Repair"
             description: "USB-C charging port replacement"
             price: "65"
+          - name: "Game Card Reader Replacement"
+            description: "Fix game card reading issues"
+            price: "55"
+          - name: "TMR Joystick Upgrade"
+            description: "Premium TMR joystick replacement"
+            tiers:
+              - label: "Left Joystick"
+                price: "35"
+              - label: "Right Joystick"
+                price: "35"
+              - label: "Both Joysticks"
+                price: "65"
           - name: "Other Faults"
             description: "Diagnostic and repair for other issues"
             quote: true
