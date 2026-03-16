@@ -1,7 +1,7 @@
 business:
   name: "DannStarr Electronics"
   tagline: "Your Local Tech Experts"
-  description: "Professional phone, tablet, laptop and computer repair services in Pinchbeck, Spalding. Plus bespoke web design and management."
+  description: "Professional phone, tablet, laptop and computer repair services in Pinchbeck, Spalding. Plus business websites and custom software."
   phone: "07907830976"
   email: "dannstarrelectronics@gmail.com"
   address:
@@ -44,7 +44,7 @@ nav:
     href: "/"
   - label: "Repairs"
     href: "/repairs/"
-  - label: "Web Design"
+  - label: "Web & Software"
     href: "/web-design/"
   - label: "Blog"
     href: "/blog"

@@ -4,7 +4,7 @@ import Section from '@components/shared/Section.astro';
 import Card from '@components/shared/Card.astro';
 import Button from '@components/shared/Button.astro';
 
-const features = [
+const websiteFeatures = [
   {
     title: 'Custom Design',
     description: "Unique designs tailored to your brand - no cookie-cutter templates",
@@ -39,40 +39,45 @@ const features = [
 ---
 
 <PageLayout
-  title="Web Design & Management"
-  description="Bespoke, modern websites built for your business. Fast, mobile-friendly, and SEO-optimised. Professional web design starting from just £250."
+  title="Websites & Custom Software"
+  description="Business websites and custom software built by someone who actually runs a business. Fast, modern websites from £250, plus bespoke software for businesses with clunky manual processes."
 >
   <!-- Hero -->
   <Section>
     <div class="text-center max-w-3xl mx-auto reveal">
       <h1 class="font-(family-name:--font-heading) text-4xl sm:text-5xl font-extrabold text-(--color-text-primary) mb-4">
-        Bespoke <span class="text-(--color-brand)">Web Design</span> & Management
+        <span class="text-(--color-brand)">Websites</span> & Custom Software
       </h1>
       <p class="text-(--color-text-secondary) text-lg mb-6">
-        We don't just fix devices — we build beautiful, modern websites too. From simple landing pages to full business sites, we create fast, mobile-friendly websites tailored to your needs.
+        We build websites and software for small businesses. Not as a side hustle — it's a genuine part of what we do, built on the same principles as our repair work: understand the problem, fix it properly, charge fairly.
       </p>
-      <p class="text-3xl font-bold text-(--color-brand) mb-8">
-        Starting from just £250
-      </p>
-      <Button href="/contact" variant="primary" size="lg" pulse>
-        Get a Free Quote
-      </Button>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <Button href="/contact" variant="primary" size="lg" pulse>
+          Get a Free Quote
+        </Button>
+        <Button href="#custom-software" variant="outline" size="lg">
+          Custom Software
+        </Button>
+      </div>
     </div>
   </Section>
 
-  <!-- Features Grid -->
+  <!-- Websites for Local Businesses -->
   <Section bg="secondary">
     <div class="text-center mb-12 reveal">
       <h2 class="font-(family-name:--font-heading) text-3xl font-bold text-(--color-text-primary) mb-4">
-        What You Get
+        Websites for Local Businesses
       </h2>
       <p class="text-(--color-text-secondary) text-lg max-w-2xl mx-auto">
-        Every website we build is crafted with care, optimised for performance, and designed to grow with your business.
+        A lot of local businesses either have no website, or one that's been sat untouched for years. We build modern, fast sites that actually work for your business — and we keep them updated so they stay that way.
+      </p>
+      <p class="text-2xl font-bold text-(--color-brand) mt-6">
+        Starting from just £250
       </p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {features.map((feature, i) => (
+      {websiteFeatures.map((feature, i) => (
         <Card class={`reveal reveal-delay-${(i % 4) + 1}`} hover={false}>
           <div class="flex items-start gap-3">
             <div class="w-10 h-10 rounded-lg bg-(--color-brand)/10 flex items-center justify-center shrink-0">
@@ -90,14 +95,54 @@ const features = [
     </div>
   </Section>
 
+  <!-- Need More Than a Website? -->
+  <Section id="custom-software">
+    <div class="max-w-3xl mx-auto reveal">
+      <h2 class="font-(family-name:--font-heading) text-3xl font-bold text-(--color-text-primary) mb-6 text-center">
+        Need Something More Than a Website?
+      </h2>
+      <div class="space-y-4 text-(--color-text-secondary) text-lg leading-relaxed">
+        <p>
+          Some businesses don't just need a website — they need software that actually solves a problem. Maybe you're tracking jobs in a spreadsheet that's getting out of hand. Maybe you're copying data between three different systems. Maybe your booking process involves a notebook and a phone call.
+        </p>
+        <p>
+          We build custom software for businesses like yours. Not massive enterprise systems — practical tools that replace the clunky, manual processes that slow you down every day. The kind of thing where you think "there must be a better way to do this" but the off-the-shelf options don't quite fit.
+        </p>
+        <p>
+          If you've got a process that feels like it should be easier, it probably can be. We'll have an honest conversation about whether custom software makes sense for your situation, and if it does, we'll build something that actually works for the way your business runs.
+        </p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- Built from Real Experience -->
+  <Section bg="secondary">
+    <div class="max-w-3xl mx-auto reveal">
+      <h2 class="font-(family-name:--font-heading) text-3xl font-bold text-(--color-text-primary) mb-6 text-center">
+        Built from Real Business Experience
+      </h2>
+      <div class="space-y-4 text-(--color-text-secondary) text-lg leading-relaxed">
+        <p>
+          We don't just build software for other people — we use it ourselves. Running a repair shop means managing jobs, tracking parts, communicating with customers, and keeping everything organised. We know what it's like when your tools don't quite work the way you need them to.
+        </p>
+        <p>
+          That's exactly why we built <a href="https://www.repairkeeper.co.uk" target="_blank" rel="noopener noreferrer" class="text-(--color-brand) hover:underline font-medium">RepairKeeper</a> — a repair management platform designed around how repair businesses actually work, because we are one. It handles job tracking, customer communication, invoicing, and more. It's a real product, built to solve a real problem we had ourselves.
+        </p>
+        <p>
+          That same approach — start with a real problem, build something that genuinely works — is what we bring to every software project. We're not a big agency pitching solutions to problems you don't have. We're a small business that builds things for other small businesses.
+        </p>
+      </div>
+    </div>
+  </Section>
+
   <!-- CTA Banner -->
   <section class="bg-(--color-brand) py-16">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="font-(family-name:--font-heading) text-3xl font-bold text-white mb-4">
-        Ready to Get Started?
+        Let's Talk About What You Need
       </h2>
       <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">
-        Whether you need a brand new website or want to refresh your existing one, we'd love to chat. No obligation, just a friendly conversation about what you need.
+        Whether it's a website for your business, or software to replace a process that's been driving you mad — we'd love to hear about it. No obligation, no jargon, just a straight conversation.
       </p>
       <div class="flex flex-wrap gap-4 justify-center">
         <Button href="/contact" size="lg" class="!bg-white !text-(--color-brand) hover:!bg-gray-100">
