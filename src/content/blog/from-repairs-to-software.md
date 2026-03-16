@@ -3,7 +3,7 @@ title: "From Repairing Devices to Building Software for Real Businesses"
 description: "How fixing phones and laptops naturally led us into building websites and custom software — and why we're not going anywhere as a repair shop."
 date: 2026-03-16
 category: "News"
-author: "Dann Sherlock"
+author: "Dann Starr"
 ---
 
 I want to talk about something that's been a natural progression for us over the past few years, and explain where DannStarr Electronics is heading — without burying the lede: **we're still a repair shop first and foremost**. That hasn't changed, and it's not going to.

@@ -3,7 +3,7 @@ title: "Welcome to Our New Website!"
 description: "We've completely rebuilt our website from the ground up. Here's what's new and what it means for you."
 date: 2026-02-21
 category: "News"
-author: "Dann Sherlock"
+author: "Dann Starr"
 ---
 
 We're thrilled to announce the launch of our brand new website! After over 13 years with our trusty old site, we felt it was time for a complete overhaul to better serve our customers and showcase everything we do here at DannStarr Electronics.
