@@ -9,7 +9,8 @@ business:
     area: "Pinchbeck"
     postcode: "PE11 3RQ"
     full: "61 Rotten Row, Pinchbeck, PE11 3RQ"
-  bookingUrl: "https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
+  bookingUrl: "https://app.repairkeeper.co.uk/book/dannstarr-electronics"
+  enquiryUrl: "https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
   website: "https://dannstarr.co.uk"
 
 hours:
