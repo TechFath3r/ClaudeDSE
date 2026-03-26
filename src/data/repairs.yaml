@@ -2438,7 +2438,7 @@ categories:
             price: "TBA"
           - name: "Battery Replacement"
             description: "Restore your battery life"
-            price: "9000"
+            price: "90"
           - name: "Charging Port Repair"
             description: "USB-C charging port replacement"
             price: "TBA"
