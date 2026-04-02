@@ -1,29 +1,29 @@
-- name: "Sarah M."
+- name: "C Dan Smith"
   rating: 5
-  text: "Absolutely brilliant service! Dann fixed my iPhone screen in under an hour. Friendly, professional, and very reasonably priced. Wouldn't go anywhere else!"
+  text: "We contacted Dannstar at 5.15 pm Friday evening - by 1 pm today Saturday she has the iPad back with a new screen & battery fitted - excellent friendly professional service."
+  service: "iPad Screen & Battery"
+
+- name: "Mick Parkinson"
+  rating: 5
+  text: "Did a great job repairing my phones screen and gave good advice too, fair price, can't complain, would definitely use him again, thanks."
+  service: "Phone Screen Repair"
+
+- name: "David Gent"
+  rating: 5
+  text: "Very fast and high quality iphone screen replacement, dropped damaged phone off in the morning and ready by lunchtime looking like new. Great communications as well. Couldn't ask for more."
   service: "iPhone Screen Repair"
 
-- name: "James T."
+- name: "Harry Wills"
   rating: 5
-  text: "Brought my laptop in with a virus issue and Dann had it sorted the same day. Really knowledgeable and explains everything in plain English. Highly recommend!"
-  service: "Laptop Repair"
-
-- name: "Linda P."
-  rating: 5
-  text: "DannStarr built us a beautiful website for our small business. Professional, modern, and they even help us manage it. Fantastic value for money."
-  service: "Web Design"
-
-- name: "Mark R."
-  rating: 5
-  text: "Great local business! Fixed my Samsung that another shop said couldn't be repaired. Fast turnaround and kept me updated the whole time. Top notch!"
+  text: "Fantastic service! Completed an FRP reset on my locked Samsung. Highly recommend!"
   service: "Samsung Repair"
 
-- name: "Emma W."
+- name: "louise emilia"
   rating: 5
-  text: "Had a cracked iPad screen and Dann sorted it perfectly. The kids are thrilled! Really fair prices compared to the big chains. Will definitely be back."
-  service: "iPad Repair"
+  text: "Had a very smashed up iPhone 7 and needed a new screen which was fitted to an excellent standard and he even put on a screen protector as an extra. Extremely pleased."
+  service: "iPhone Screen Repair"
 
-- name: "David H."
+- name: "Karen Stockdale"
   rating: 5
-  text: "Excellent data recovery service. Thought I'd lost everything when my hard drive failed but Dann managed to recover all my photos and documents. A lifesaver!"
-  service: "Data Recovery"
+  text: "Great service (again!). Thanks Dan. Very quick and reasonable. Love the fact you use genuine Apple parts. My iPhone 6 Plus lives on a little longer."
+  service: "iPhone Repair"

@@ -3,21 +3,21 @@ import Section from '../shared/Section.astro';
 
 const testimonials = [
   {
-    name: 'Sarah M.',
-    text: "Absolutely brilliant service! Dann fixed my iPhone screen in under an hour. Friendly, professional, and very reasonably priced. Wouldn't go anywhere else!",
+    name: 'C Dan Smith',
+    text: 'We contacted Dannstar at 5.15 pm Friday evening - by 1 pm today Saturday she has the iPad back with a new screen & battery fitted - excellent friendly professional service.',
+    service: 'iPad Screen & Battery',
+    rating: 5,
+  },
+  {
+    name: 'Mick Parkinson',
+    text: "Did a great job repairing my phones screen and gave good advice too, fair price, can't complain, would definitely use him again, thanks.",
+    service: 'Phone Screen Repair',
+    rating: 5,
+  },
+  {
+    name: 'David Gent',
+    text: "Very fast and high quality iphone screen replacement, dropped damaged phone off in the morning and ready by lunchtime looking like new. Great communications as well. Couldn't ask for more.",
     service: 'iPhone Screen Repair',
-    rating: 5,
-  },
-  {
-    name: 'James T.',
-    text: "Brought my laptop in with a virus issue and Dann had it sorted the same day. Really knowledgeable and explains everything in plain English. Highly recommend!",
-    service: 'Laptop Repair',
-    rating: 5,
-  },
-  {
-    name: 'Linda P.',
-    text: 'DannStarr built us a beautiful website for our small business. Professional, modern, and they even help us manage it. Fantastic value for money.',
-    service: 'Web Design',
     rating: 5,
   },
 ];
@@ -29,7 +29,7 @@ const testimonials = [
       What Our Customers Say
     </h2>
     <p class="text-(--color-text-secondary) text-lg max-w-2xl mx-auto">
-      We're proud to be Pinchbeck's most trusted tech repair shop. Here's what our customers think.
+      Rated <strong class="text-(--color-text-primary)">4.8 out of 5</strong> from 63 reviews on Google. Here's what real customers think.
     </p>
   </div>
 
@@ -53,5 +53,19 @@ const testimonials = [
         </figcaption>
       </figure>
     ))}
+  </div>
+
+  <div class="text-center mt-8 reveal">
+    <a
+      href="https://www.google.com/maps/place/DannStarr+Electronics/@52.8147907,-0.1667117,17z/data=!4m8!3m7!1s0x487804ebfcb587a1:0xbd704ccb8f0bede0!8m2!3d52.8147907!4d-0.1667117!9m1!1b1!16s%2Fg%2F12334hp1j"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 text-(--color-brand) hover:text-(--color-brand-hover) font-semibold transition-colors"
+    >
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+      </svg>
+      See all 63 reviews on Google →
+    </a>
   </div>
 </Section>
