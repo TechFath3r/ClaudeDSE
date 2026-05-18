@@ -1581,7 +1581,7 @@ categories:
             description: "Lightning charging port replacement"
             tiers:
               - label: "Repair existing port"
-                price: "25"
+                price: "35"
               - label: "Port Replacement"
                 price: "65"
           - name: "Back Glass Repair"
