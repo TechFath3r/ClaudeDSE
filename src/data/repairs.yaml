@@ -259,8 +259,6 @@ categories:
           - name: "Screen Replacement"
             description: "Professional screen replacement with warranty"
             tiers:
-              - label: "Budget LCD"
-                price: "95"
               - label: "Premium Soft OLED"
                 price: "165"
               - label: "Official Apple Screen"
