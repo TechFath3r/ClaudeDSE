@@ -17,7 +17,20 @@ import type { Category, Device, Repair, Tier } from '@/lib/repairs';
  */
 
 export const SCHEMA_VERSION = 1;
-export const BOOKING_BASE_URL = 'https://shop.dannstarr.co.uk/book';
+
+/**
+ * Public booking base URL, supplied at build time via the `PUBLIC_BOOKING_BASE_URL`
+ * Astro env var (e.g. `https://shop.dannstarr.co.uk/book`).
+ *
+ * When unset, booking is gated OFF: no deep links are generated, catalogue
+ * entries carry a null `bookingUrl`, and the static pages fall back to the
+ * existing RepairKeeper enquire flow. This stops dead "Book" buttons shipping
+ * before the dynamic shop is live, while still letting the catalogue describe
+ * every bookable repair by slug.
+ */
+const BOOKING_BASE_URL_RAW = (import.meta.env.PUBLIC_BOOKING_BASE_URL ?? '').trim();
+export const BOOKING_ENABLED = BOOKING_BASE_URL_RAW.length > 0;
+export const BOOKING_BASE_URL = BOOKING_BASE_URL_RAW.replace(/\/+$/, '');
 export const CATALOGUE_SOURCE_PATH = 'src/data/repairs.yaml';
 
 export type BookingKind =
@@ -28,7 +41,8 @@ export type BookingKind =
 export interface BookingOption {
   kind: BookingKind;
   bookingSlug: string;
-  bookingUrl: string;
+  /** Absolute deep link into the dynamic shop, or null when booking is gated off. */
+  bookingUrl: string | null;
 
   categorySlug: string;
   categoryName: string;
@@ -164,8 +178,12 @@ export function buildBookingSlug(
   return parts.join('/');
 }
 
-/** Build the absolute dynamic-shop booking URL for a booking slug. */
-export function buildBookingUrl(bookingSlug: string): string {
+/**
+ * Build the absolute dynamic-shop booking URL for a booking slug, or null when
+ * booking is gated off (`PUBLIC_BOOKING_BASE_URL` unset).
+ */
+export function buildBookingUrl(bookingSlug: string): string | null {
+  if (!BOOKING_ENABLED) return null;
   return `${BOOKING_BASE_URL}/${bookingSlug}`;
 }
 
@@ -180,11 +198,17 @@ export function getRepairBookingOptions(
   repair: Repair,
   ctx: DeviceContext,
 ): BookingOption[] {
+  // Normalise the device-page slugs (which may carry stray casing, e.g.
+  // "iphone-16E") into consistent lower-case booking tokens. The static repair
+  // routes still use the raw YAML slug; the case-insensitive shop resolver
+  // prefers lower-case, so this only affects booking links, never page routes.
+  const categorySlug = slugify(ctx.categorySlug);
+  const deviceSlug = slugify(ctx.deviceSlug);
   const repairSlug = slugify(repair.name);
   const base = {
-    categorySlug: ctx.categorySlug,
+    categorySlug,
     categoryName: ctx.categoryName,
-    deviceSlug: ctx.deviceSlug,
+    deviceSlug,
     deviceName: ctx.deviceName,
     repairSlug,
     repairName: repair.name,
@@ -193,7 +217,7 @@ export function getRepairBookingOptions(
   };
 
   if (repair.quote) {
-    const bookingSlug = buildBookingSlug(ctx.categorySlug, ctx.deviceSlug, repairSlug);
+    const bookingSlug = buildBookingSlug(categorySlug, deviceSlug, repairSlug);
     return [
       {
         ...base,
@@ -215,8 +239,8 @@ export function getRepairBookingOptions(
     return repair.tiers.map((tier: Tier) => {
       const tierSlug = slugify(tier.label);
       const bookingSlug = buildBookingSlug(
-        ctx.categorySlug,
-        ctx.deviceSlug,
+        categorySlug,
+        deviceSlug,
         repairSlug,
         tierSlug,
       );
@@ -234,7 +258,7 @@ export function getRepairBookingOptions(
   }
 
   if (repair.price !== undefined) {
-    const bookingSlug = buildBookingSlug(ctx.categorySlug, ctx.deviceSlug, repairSlug);
+    const bookingSlug = buildBookingSlug(categorySlug, deviceSlug, repairSlug);
     const price = normalizePrice(repair.price);
     return [
       {

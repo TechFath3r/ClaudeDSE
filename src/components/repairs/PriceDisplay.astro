@@ -35,7 +35,7 @@ const quoteOption = quote ? bookingOptions?.[0] : undefined;
 ---
 
 {quote ? (
-  quoteOption?.bookable ? (
+  quoteOption?.bookable && quoteOption.bookingUrl ? (
     <Button href={quoteOption.bookingUrl} variant="outline" size="sm" external>
       Book assessment
     </Button>
@@ -69,7 +69,7 @@ const quoteOption = quote ? bookingOptions?.[0] : undefined;
             ) : (
               <span class="font-semibold text-(--color-text-primary)">{formatted.text}</span>
             )}
-            {option?.bookable && (
+            {option?.bookable && option.bookingUrl && (
               <a
                 href={option.bookingUrl}
                 rel="noopener noreferrer"
@@ -101,7 +101,7 @@ const quoteOption = quote ? bookingOptions?.[0] : undefined;
         ) : (
           <span class="text-lg font-bold text-(--color-text-primary)">{formatted.text}</span>
         )}
-        {option?.bookable && (
+        {option?.bookable && option.bookingUrl && (
           <a
             href={option.bookingUrl}
             rel="noopener noreferrer"
