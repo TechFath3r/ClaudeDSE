@@ -6,6 +6,7 @@ import Breadcrumb from '@components/shared/Breadcrumb.astro';
 import PriceDisplay from '@components/repairs/PriceDisplay.astro';
 import { getAllCategories, hasDevices } from '@/lib/repairs';
 import type { Category, Device } from '@/lib/repairs';
+import { getRepairBookingOptions } from '@/lib/booking';
 
 export function getStaticPaths() {
   const categories = getAllCategories();
@@ -31,6 +32,13 @@ interface Props {
 }
 
 const { category, device } = Astro.props;
+
+const bookingCtx = {
+  categorySlug: category.slug,
+  categoryName: category.name,
+  deviceSlug: device.slug,
+  deviceName: device.name,
+};
 ---
 
 <PageLayout
@@ -74,7 +82,12 @@ const { category, device } = Astro.props;
                     )}
                   </td>
                   <td class="text-right py-4 px-4 align-top">
-                    <PriceDisplay price={repair.price} tiers={repair.tiers} quote={repair.quote} />
+                    <PriceDisplay
+                      price={repair.price}
+                      tiers={repair.tiers}
+                      quote={repair.quote}
+                      bookingOptions={getRepairBookingOptions(repair, bookingCtx)}
+                    />
                   </td>
                 </tr>
               ))}
@@ -100,12 +113,12 @@ const { category, device } = Astro.props;
           Back to {category.name}
         </a>
         <Button
-          href="https://app.repairkeeper.co.uk/book/dannstarr-electronics"
+          href="https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
           variant="primary"
           size="md"
           external
         >
-          Book This Repair
+          Not sure? Book a diagnosis
         </Button>
       </div>
     </div>

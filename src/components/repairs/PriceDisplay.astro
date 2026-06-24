@@ -1,5 +1,6 @@
 ---
 import Button from '@components/shared/Button.astro';
+import type { BookingOption } from '@/lib/booking';
 
 interface Tier {
   label: string;
@@ -10,9 +11,15 @@ interface Props {
   price?: number | string;
   tiers?: Tier[];
   quote?: boolean;
+  /**
+   * Normalised booking options for this repair, in display order:
+   * one per tier for tiered repairs, otherwise a single option. When provided,
+   * each bookable option renders a deep link into the dynamic booking flow.
+   */
+  bookingOptions?: BookingOption[];
 }
 
-const { price, tiers, quote } = Astro.props;
+const { price, tiers, quote, bookingOptions } = Astro.props;
 
 function formatPrice(value: number | string): { text: string; style: string } {
   if (value === 'TBA') return { text: 'TBA', style: 'tba' };
@@ -23,35 +30,56 @@ function formatPrice(value: number | string): { text: string; style: string } {
   if (!isNaN(num)) return { text: `£${num.toFixed(2)}`, style: 'price' };
   return { text: String(value), style: 'price' };
 }
+
+const quoteOption = quote ? bookingOptions?.[0] : undefined;
 ---
 
 {quote ? (
-  <Button
-    href="https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
-    variant="outline"
-    size="sm"
-    external
-  >
-    Get a Quote
-  </Button>
+  quoteOption?.bookable ? (
+    <Button href={quoteOption.bookingUrl} variant="outline" size="sm" external>
+      Book assessment
+    </Button>
+  ) : (
+    <Button
+      href="https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
+      variant="outline"
+      size="sm"
+      external
+    >
+      Get a Quote
+    </Button>
+  )
 ) : tiers && tiers.length > 0 ? (
   <div class="space-y-1.5">
-    {tiers.map((tier) => {
+    {tiers.map((tier, i) => {
       const formatted = formatPrice(tier.price);
+      const option = bookingOptions?.[i];
       return (
         <div class="flex items-center justify-between gap-3 text-sm">
           <span class="text-(--color-text-secondary)">{tier.label}</span>
-          {formatted.style === 'tba' ? (
-            <span class="tba-badge inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium">
-              TBA
-            </span>
-          ) : formatted.style === 'free' ? (
-            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/15 text-green-700 dark:bg-green-900/30 dark:text-green-400">
-              FREE
-            </span>
-          ) : (
-            <span class="font-semibold text-(--color-text-primary)">{formatted.text}</span>
-          )}
+          <div class="flex items-center gap-2 shrink-0">
+            {formatted.style === 'tba' ? (
+              <span class="tba-badge inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium">
+                TBA
+              </span>
+            ) : formatted.style === 'free' ? (
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/15 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                FREE
+              </span>
+            ) : (
+              <span class="font-semibold text-(--color-text-primary)">{formatted.text}</span>
+            )}
+            {option?.bookable && (
+              <a
+                href={option.bookingUrl}
+                rel="noopener noreferrer"
+                class="book-link"
+                aria-label={`Book ${option.repairName}${option.tierLabel ? ` — ${option.tierLabel}` : ''}`}
+              >
+                Book
+              </a>
+            )}
+          </div>
         </div>
       );
     })}
@@ -59,16 +87,52 @@ function formatPrice(value: number | string): { text: string; style: string } {
 ) : price !== undefined ? (
   (() => {
     const formatted = formatPrice(price);
-    return formatted.style === 'tba' ? (
-      <span class="tba-badge inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium">
-        TBA
-      </span>
-    ) : formatted.style === 'free' ? (
-      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/15 text-green-700 dark:bg-green-900/30 dark:text-green-400">
-        FREE
-      </span>
-    ) : (
-      <span class="text-lg font-bold text-(--color-text-primary)">{formatted.text}</span>
+    const option = bookingOptions?.[0];
+    return (
+      <div class="flex items-center justify-end gap-3">
+        {formatted.style === 'tba' ? (
+          <span class="tba-badge inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium">
+            TBA
+          </span>
+        ) : formatted.style === 'free' ? (
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500/15 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+            FREE
+          </span>
+        ) : (
+          <span class="text-lg font-bold text-(--color-text-primary)">{formatted.text}</span>
+        )}
+        {option?.bookable && (
+          <a
+            href={option.bookingUrl}
+            rel="noopener noreferrer"
+            class="book-link"
+            aria-label={`Book ${option.repairName}`}
+          >
+            Book
+          </a>
+        )}
+      </div>
     );
   })()
 ) : null}
+
+<style>
+  .book-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    color: var(--color-brand);
+    border: 1px solid color-mix(in srgb, var(--color-brand) 35%, transparent);
+    background: color-mix(in srgb, var(--color-brand) 8%, transparent);
+    white-space: nowrap;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .book-link:hover {
+    background: var(--color-brand);
+    color: #fff;
+  }
+</style>
