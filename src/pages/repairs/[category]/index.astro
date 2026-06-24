@@ -9,6 +9,7 @@ import SearchFilter from '@components/shared/SearchFilter.astro';
 import PriceDisplay from '@components/repairs/PriceDisplay.astro';
 import { getAllCategories, hasDevices } from '@/lib/repairs';
 import type { Category } from '@/lib/repairs';
+import { getRepairBookingOptions } from '@/lib/booking';
 
 export function getStaticPaths() {
   const categories = getAllCategories();
@@ -24,6 +25,14 @@ interface Props {
 
 const { category } = Astro.props;
 const showDevices = hasDevices(category);
+
+// Flat categories (no per-device pages) act as their own device for booking.
+const flatBookingCtx = {
+  categorySlug: category.slug,
+  categoryName: category.name,
+  deviceSlug: category.slug,
+  deviceName: category.name,
+};
 ---
 
 <PageLayout
@@ -99,7 +108,12 @@ const showDevices = hasDevices(category);
                     )}
                   </td>
                   <td class="text-right py-4 px-4">
-                    <PriceDisplay price={repair.price} tiers={repair.tiers} quote={repair.quote} />
+                    <PriceDisplay
+                      price={repair.price}
+                      tiers={repair.tiers}
+                      quote={repair.quote}
+                      bookingOptions={getRepairBookingOptions(repair, flatBookingCtx)}
+                    />
                   </td>
                 </tr>
               ))}
