@@ -4,6 +4,149 @@ categories:
     icon: "phone"
     description: "Screen repairs, battery replacements, and more for all iPhone models"
     devices:
+      - name: "iPhone Air"
+        slug: "iphone-air"
+        repairs:
+          - name: "Hydrogel Screen Protector"
+            description: "Premium hydrogel screen protection"
+            price: "10"
+          - name: "Screen Replacement"
+            description: "Professional screen replacement with warranty"
+            tiers:
+              - label: "Premium Soft OLED"
+                price: "265"
+              - label: "Used genuine screen (£350–£380 subject to availability)"
+                price: "Varies"
+              - label: "Official Apple Screen"
+                price: "395"
+          - name: "Battery Replacement"
+            description: "Restore your battery life"
+            tiers:
+              - label: "Official Apple Battery"
+                price: "120"
+          - name: "Water Damage Assessment"
+            description: "Professional assessment and repair"
+            quote: true
+          - name: "Other faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "iPhone 17E"
+        slug: "iphone-17E"
+        repairs:
+          - name: "Hydrogel Screen Protector"
+            description: "Premium hydrogel screen protection"
+            price: "10"
+          - name: "Screen Replacement"
+            description: "Professional screen replacement with warranty"
+            tiers:
+              - label: "Premium Soft OLED"
+                price: "130"
+              - label: "Used genuine screen (£165–£180 subject to availability)"
+                price: "Varies"
+              - label: "Official Apple Screen"
+                price: "290"
+          - name: "Battery Replacement"
+            description: "Restore your battery life"
+            tiers:
+              - label: "Quality Aftermarket"
+                price: "65"
+              - label: "Official Apple Battery"
+                price: "100"
+          - name: "Water Damage Assessment"
+            description: "Professional assessment and repair"
+            quote: true
+          - name: "Other faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "iPhone 17 Pro Max"
+        slug: "iphone-17-pro-max"
+        repairs:
+          - name: "Hydrogel Screen Protector"
+            description: "Premium hydrogel screen protection"
+            price: "10"
+          - name: "Screen Replacement"
+            description: "Professional screen replacement with warranty"
+            tiers:
+              - label: "Premium Soft OLED"
+                price: "210"
+              - label: "Used genuine screen (£365–£385 subject to availability)"
+                price: "Varies"
+              - label: "Official Apple Screen"
+                price: "435"
+          - name: "Battery Replacement"
+            description: "Restore your battery life"
+            tiers:
+              - label: "Quality Aftermarket"
+                price: "75"
+              - label: "Official Apple Battery"
+                price: "120"
+          - name: "Water Damage Assessment"
+            description: "Professional assessment and repair"
+            quote: true
+          - name: "Other faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "iPhone 17 Pro"
+        slug: "iphone-17-pro"
+        repairs:
+          - name: "Hydrogel Screen Protector"
+            description: "Premium hydrogel screen protection"
+            price: "10"
+          - name: "Screen Replacement"
+            description: "Professional screen replacement with warranty"
+            tiers:
+              - label: "Premium Soft OLED"
+                price: "175"
+              - label: "Used genuine screen (£340–£365 subject to availability)"
+                price: "Varies"
+              - label: "Official Apple Screen"
+                price: "390"
+          - name: "Battery Replacement"
+            description: "Restore your battery life"
+            tiers:
+              - label: "Quality Aftermarket"
+                price: "75"
+              - label: "Official Apple Battery"
+                price: "120"
+          - name: "Water Damage Assessment"
+            description: "Professional assessment and repair"
+            quote: true
+          - name: "Other faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
+      - name: "iPhone 17"
+        slug: "iphone-17"
+        repairs:
+          - name: "Hydrogel Screen Protector"
+            description: "Premium hydrogel screen protection"
+            price: "10"
+          - name: "Screen Replacement"
+            description: "Professional screen replacement with warranty"
+            tiers:
+              - label: "Premium Soft OLED"
+                price: "210"
+              - label: "Used genuine screen (£365–£385 subject to availability)"
+                price: "Varies"
+              - label: "Official Apple Screen"
+                price: "390"
+          - name: "Battery Replacement"
+            description: "Restore your battery life"
+            tiers:
+              - label: "Quality Aftermarket"
+                price: "75"
+              - label: "Official Apple Battery"
+                price: "120"
+          - name: "Water Damage Assessment"
+            description: "Professional assessment and repair"
+            quote: true
+          - name: "Other faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
       - name: "iPhone 16E"
         slug: "iphone-16E"
         repairs:
@@ -1694,6 +1837,16 @@ categories:
     icon: "phone"
     description: "Galaxy screen repairs, battery replacements, and more"
     devices:
+      - name: "Samsung Tab A7 SM-T500"
+        slug: "samsung-tab-a7-sm-t500"
+        repairs:
+          - name: "Charging Port Repair"
+            description: "USB-C charging port replacement"
+            price: "65"
+          - name: "Other Faults"
+            description: "Diagnostic and repair for other issues"
+            quote: true
+
       - name: "Galaxy S24 Ultra"
         slug: "galaxy-s24-ultra"
         repairs:
@@ -2659,9 +2812,15 @@ categories:
           - name: "HDMI Port Repair"
             description: "HDMI port replacement"
             price: "75"
+          - name: "USB Port Replacement"
+            description: "USB port replacement"
+            price: "75"
           - name: "Disc Drive Repair"
             description: "Disc drive replacement or repair"
             price: "85"
+          - name: "Deep Clean & Liquid Metal Refresh"
+            description: "Internal deep clean and liquid metal refresh"
+            price: "65"
           - name: "Other Faults"
             description: "Diagnostic and repair for other issues"
             quote: true
@@ -2707,7 +2866,10 @@ categories:
             price: "55"
           - name: "Charging Port Repair"
             description: "USB-C charging port replacement"
-            price: "65"
+            price: "75"
+          - name: "Charge Circuit Repair"
+            description: "Charging circuit diagnosis and repair"
+            price: "120"
           - name: "Game Card Reader Replacement"
             description: "Fix game card reading issues"
             price: "55"
@@ -2729,7 +2891,10 @@ categories:
         repairs:
           - name: "Charging Port Repair"
             description: "USB-C charging port replacement"
-            price: "65"
+            price: "75"
+          - name: "Charge Circuit Repair"
+            description: "Charging circuit diagnosis and repair"
+            price: "120"
           - name: "Other Faults"
             description: "Diagnostic and repair for other issues"
             quote: true
