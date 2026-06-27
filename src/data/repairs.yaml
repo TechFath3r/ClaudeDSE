@@ -1557,9 +1557,7 @@ categories:
             price: "10"
           - name: "Screen Replacement"
             description: "Professional screen replacement with warranty"
-            tiers:
-              - label: "Budget LCD"
-                price: "75"
+            price: "75"
           - name: "Battery Replacement"
             description: "Restore your battery life"
             price: "50"
