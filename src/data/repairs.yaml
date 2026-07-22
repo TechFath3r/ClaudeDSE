@@ -2600,7 +2600,7 @@ categories:
         repairs:
           - name: "Glass Screen Replacement"
             description: "Professional digitiser replacement"
-            price: "95"
+            price: "100"
           - name: "LCD Display Replacement" 
             description: "Professional LCD replacement"
             price: "150"
