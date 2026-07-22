@@ -526,6 +526,8 @@ categories:
             tiers:
               - label: "Premium Soft OLED"
                 price: "185"
+              - label: "Used original screen"
+                price: "280"
               - label: "Official Apple Screen"
                 price: "355"
           - name: "Battery Replacement"
