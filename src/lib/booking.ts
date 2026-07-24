@@ -19,16 +19,17 @@ import type { Category, Device, Repair, Tier } from '@/lib/repairs';
 export const SCHEMA_VERSION = 1;
 
 /**
- * Public booking base URL, supplied at build time via the `PUBLIC_BOOKING_BASE_URL`
- * Astro env var (e.g. `https://shop.dannstarr.co.uk/book`).
+ * Public RepairKeeper booking URL. The default points at DannStarr's live
+ * RepairKeeper booking page; `PUBLIC_BOOKING_BASE_URL` can override it at build
+ * time if the public booking host changes.
  *
- * When unset, booking is gated OFF: no deep links are generated, catalogue
- * entries carry a null `bookingUrl`, and the static pages fall back to the
- * existing RepairKeeper enquire flow. This stops dead "Book" buttons shipping
- * before the dynamic shop is live, while still letting the catalogue describe
- * every bookable repair by slug.
+ * Static repair pages pass safe, customer-visible context as query parameters:
+ * device, service, fault, and the deterministic booking slug. RepairKeeper uses
+ * device/service/fault to pre-fill the public booking form; the booking slug is
+ * kept for traceability and future resolver work.
  */
-const BOOKING_BASE_URL_RAW = (import.meta.env.PUBLIC_BOOKING_BASE_URL ?? '').trim();
+const DEFAULT_BOOKING_BASE_URL = 'https://app.repairkeeper.co.uk/book/dannstarr-electronics';
+const BOOKING_BASE_URL_RAW = (import.meta.env.PUBLIC_BOOKING_BASE_URL ?? DEFAULT_BOOKING_BASE_URL).trim();
 export const BOOKING_ENABLED = BOOKING_BASE_URL_RAW.length > 0;
 export const BOOKING_BASE_URL = BOOKING_BASE_URL_RAW.replace(/\/+$/, '');
 export const CATALOGUE_SOURCE_PATH = 'src/data/repairs.yaml';
@@ -178,13 +179,43 @@ export function buildBookingSlug(
   return parts.join('/');
 }
 
+interface BookingUrlContext {
+  deviceName: string;
+  repairName: string;
+  repairDescription?: string | null;
+  tierLabel?: string | null;
+  priceLabel: string;
+}
+
+function serviceLabelForBooking(ctx: BookingUrlContext): string {
+  return ctx.tierLabel ? `${ctx.repairName} — ${ctx.tierLabel}` : ctx.repairName;
+}
+
 /**
- * Build the absolute dynamic-shop booking URL for a booking slug, or null when
- * booking is gated off (`PUBLIC_BOOKING_BASE_URL` unset).
+ * Build the absolute RepairKeeper booking URL for a booking slug, or null when
+ * booking is gated off. The slug stays in the query for traceability; RepairKeeper
+ * pre-fills the customer-facing fields from device/service/fault.
  */
-export function buildBookingUrl(bookingSlug: string): string | null {
+export function buildBookingUrl(
+  bookingSlug: string,
+  ctx: BookingUrlContext,
+): string | null {
   if (!BOOKING_ENABLED) return null;
-  return `${BOOKING_BASE_URL}/${bookingSlug}`;
+
+  const url = new URL(BOOKING_BASE_URL);
+  const service = serviceLabelForBooking(ctx);
+  const faultParts = [service];
+  if (ctx.repairDescription) faultParts.push(ctx.repairDescription);
+  if (ctx.priceLabel && ctx.priceLabel !== 'Quote required') {
+    faultParts.push(`Website price: ${ctx.priceLabel}`);
+  }
+
+  url.searchParams.set('device', ctx.deviceName);
+  url.searchParams.set('service', service);
+  url.searchParams.set('fault', faultParts.join(' — '));
+  url.searchParams.set('bookingSlug', bookingSlug);
+
+  return url.toString();
 }
 
 /**
@@ -223,7 +254,13 @@ export function getRepairBookingOptions(
         ...base,
         kind: 'quote_required_repair',
         bookingSlug,
-        bookingUrl: buildBookingUrl(bookingSlug),
+        bookingUrl: buildBookingUrl(bookingSlug, {
+          deviceName: ctx.deviceName,
+          repairName: repair.name,
+          repairDescription: repair.description ?? null,
+          tierLabel: null,
+          priceLabel: 'Quote required',
+        }),
         tierSlug: null,
         tierLabel: null,
         priceRaw: null,
@@ -249,7 +286,13 @@ export function getRepairBookingOptions(
         ...base,
         kind: 'tiered_repair' as const,
         bookingSlug,
-        bookingUrl: buildBookingUrl(bookingSlug),
+        bookingUrl: buildBookingUrl(bookingSlug, {
+          deviceName: ctx.deviceName,
+          repairName: repair.name,
+          repairDescription: repair.description ?? null,
+          tierLabel: tier.label,
+          priceLabel: price.priceLabel,
+        }),
         tierSlug,
         tierLabel: tier.label,
         ...price,
@@ -265,7 +308,13 @@ export function getRepairBookingOptions(
         ...base,
         kind: 'fixed_price_repair',
         bookingSlug,
-        bookingUrl: buildBookingUrl(bookingSlug),
+        bookingUrl: buildBookingUrl(bookingSlug, {
+          deviceName: ctx.deviceName,
+          repairName: repair.name,
+          repairDescription: repair.description ?? null,
+          tierLabel: null,
+          priceLabel: price.priceLabel,
+        }),
         tierSlug: null,
         tierLabel: null,
         ...price,

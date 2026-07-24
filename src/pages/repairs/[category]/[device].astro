@@ -6,7 +6,7 @@ import Breadcrumb from '@components/shared/Breadcrumb.astro';
 import PriceDisplay from '@components/repairs/PriceDisplay.astro';
 import { getAllCategories, hasDevices } from '@/lib/repairs';
 import type { Category, Device } from '@/lib/repairs';
-import { getRepairBookingOptions } from '@/lib/booking';
+import { buildBookingUrl, getRepairBookingOptions } from '@/lib/booking';
 
 export function getStaticPaths() {
   const categories = getAllCategories();
@@ -39,6 +39,14 @@ const bookingCtx = {
   deviceSlug: device.slug,
   deviceName: device.name,
 };
+
+const diagnosisBookingUrl = buildBookingUrl(`${category.slug}/${device.slug}/diagnostic-assessment`, {
+  deviceName: device.name,
+  repairName: 'Diagnostic Assessment',
+  repairDescription: 'Customer is not sure which repair is needed',
+  tierLabel: null,
+  priceLabel: 'Quote required',
+}) ?? 'https://app.repairkeeper.co.uk/enquire/dannstarr-electronics';
 ---
 
 <PageLayout
@@ -113,7 +121,7 @@ const bookingCtx = {
           Back to {category.name}
         </a>
         <Button
-          href="https://app.repairkeeper.co.uk/enquire/dannstarr-electronics"
+          href={diagnosisBookingUrl}
           variant="primary"
           size="md"
           external
