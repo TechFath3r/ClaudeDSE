@@ -25,6 +25,7 @@ export interface Category {
   slug: string;
   icon: string;
   description: string;
+  details?: string[];
   note?: string;
   devices?: Device[];
   repairs?: Repair[];

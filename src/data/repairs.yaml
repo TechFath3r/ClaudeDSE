@@ -3007,41 +3007,17 @@ categories:
     slug: "laptop"
     icon: "laptop"
     description: "Windows laptop and Chromebook repairs for any make or model — tell us what you have and what needs looking at"
-    note: "MacBooks have their own section. For other laptops, choose the closest issue and add your make, model, and fault details when booking. Most laptop repairs need assessment before we can confirm the final price."
+    details:
+      - "This section is for non-MacBook laptops: Windows laptops, Chromebooks, and similar devices from brands like Dell, HP, Lenovo, Acer, Asus, Toshiba, Samsung, and more. You do not need to find an exact model page — just book an assessment and tell us the make, model, and what is happening."
+      - "We can look at screen issues, battery problems, keyboards and trackpads, charging or power faults, slow laptops and upgrade requests, virus or malware problems, data recovery, liquid damage, overheating, hinges, fans, Wi-Fi, audio, webcam faults, and anything else that needs diagnosing. Most of these need to be assessed before we can confirm the final price."
+    note: "MacBooks have their own dedicated section."
     repairs:
-      - name: "Laptop Diagnostic Assessment"
-        description: "Not sure what is wrong? Book an assessment and tell us the make, model, and symptoms."
-        quote: true
-      - name: "Screen Issue"
-        description: "Cracked, dim, flickering, or blank laptop screen assessment."
-        quote: true
-      - name: "Battery Issue"
-        description: "Battery not holding charge, swelling, or replacement assessment."
-        quote: true
-      - name: "Keyboard or Trackpad Issue"
-        description: "Keys not working, damaged keyboard, faulty touchpad, or input issues."
-        quote: true
-      - name: "Charging or Power Issue"
-        description: "Charging port, charger detection, no power, or intermittent power faults."
-        quote: true
-      - name: "Slow Laptop or Upgrade"
-        description: "Performance checks, SSD upgrades, RAM upgrades, and general speed-up advice."
-        quote: true
-      - name: "Virus or Malware Removal"
-        description: "Malware, pop-ups, suspicious behaviour, browser hijacks, or security clean-up."
+      - name: "Laptop Assessment"
+        description: "For any non-MacBook laptop fault, upgrade request, virus/malware issue, or unknown problem. Tell us the make, model, and symptoms when booking."
         quote: true
       - name: "Fresh Windows 11 Install"
         description: "Clean Windows 11 installation. Data backup/recovery and licence issues may cost extra if needed."
         price: 75
-      - name: "Data Recovery or Backup"
-        description: "Help recovering files, transferring data, or backing up before repair."
-        quote: true
-      - name: "Liquid Damage Assessment"
-        description: "Assessment after spills or suspected liquid damage."
-        quote: true
-      - name: "Other Laptop Fault"
-        description: "Anything else — hinges, fans, overheating, Wi-Fi, audio, webcam, or unknown faults."
-        quote: true
 
   - name: "Game Consoles"
     slug: "game-consoles"

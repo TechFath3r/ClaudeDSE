@@ -103,6 +103,16 @@ const flatBookingCtx = {
       </p>
     </div>
 
+    {category.details && category.details.length > 0 && (
+      <div class="max-w-3xl mx-auto mb-8 space-y-4 reveal">
+        {category.details.map((paragraph) => (
+          <p class="text-(--color-text-secondary) leading-relaxed">
+            {paragraph}
+          </p>
+        ))}
+      </div>
+    )}
+
     {showDevices ? (
       <!-- Device grid mode -->
       <SearchFilter placeholder={`Search ${category.name} models...`} targetSelector="[data-device-card]" />
