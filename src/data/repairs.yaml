@@ -3006,26 +3006,41 @@ categories:
   - name: "Laptop"
     slug: "laptop"
     icon: "laptop"
-    description: "Laptop screen replacements, keyboard repairs, battery swaps, and upgrades"
-    note: "Prices vary by model. Contact us for an exact quote."
+    description: "Windows laptop and Chromebook repairs for any make or model — tell us what you have and what needs looking at"
+    note: "MacBooks have their own section. For other laptops, choose the closest issue and add your make, model, and fault details when booking. Most laptop repairs need assessment before we can confirm the final price."
     repairs:
-      - name: "Screen Replacement"
-        description: "LCD/LED laptop screen replacement"
-        price: "TBA"
-      - name: "Battery Replacement"
-        description: "Laptop battery replacement"
-        price: "TBA"
-      - name: "Keyboard Replacement"
-        description: "Laptop keyboard replacement"
-        price: "TBA"
-      - name: "SSD Upgrade"
-        description: "Speed up your laptop with an SSD upgrade"
-        price: "TBA"
-      - name: "RAM Upgrade"
-        description: "Boost performance with additional RAM"
-        price: "TBA"
-      - name: "General Diagnostic"
-        description: "Full diagnostic and assessment"
+      - name: "Laptop Diagnostic Assessment"
+        description: "Not sure what is wrong? Book an assessment and tell us the make, model, and symptoms."
+        quote: true
+      - name: "Screen Issue"
+        description: "Cracked, dim, flickering, or blank laptop screen assessment."
+        quote: true
+      - name: "Battery Issue"
+        description: "Battery not holding charge, swelling, or replacement assessment."
+        quote: true
+      - name: "Keyboard or Trackpad Issue"
+        description: "Keys not working, damaged keyboard, faulty touchpad, or input issues."
+        quote: true
+      - name: "Charging or Power Issue"
+        description: "Charging port, charger detection, no power, or intermittent power faults."
+        quote: true
+      - name: "Slow Laptop or Upgrade"
+        description: "Performance checks, SSD upgrades, RAM upgrades, and general speed-up advice."
+        quote: true
+      - name: "Virus or Malware Removal"
+        description: "Malware, pop-ups, suspicious behaviour, browser hijacks, or security clean-up."
+        quote: true
+      - name: "Fresh Windows 11 Install"
+        description: "Clean Windows 11 installation. Data backup/recovery and licence issues may cost extra if needed."
+        price: 75
+      - name: "Data Recovery or Backup"
+        description: "Help recovering files, transferring data, or backing up before repair."
+        quote: true
+      - name: "Liquid Damage Assessment"
+        description: "Assessment after spills or suspected liquid damage."
+        quote: true
+      - name: "Other Laptop Fault"
+        description: "Anything else — hinges, fans, overheating, Wi-Fi, audio, webcam, or unknown faults."
         quote: true
 
   - name: "Game Consoles"
