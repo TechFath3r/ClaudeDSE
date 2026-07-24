@@ -2189,6 +2189,221 @@ categories:
             description: "Professional assessment and repair"
             quote: true
 
+  - name: "Samsung A Series Mobile Phones"
+    slug: "samsung-a-series-mobile-phones"
+    icon: "phone"
+    description: "Samsung Galaxy A series screen repairs with bookable pricing"
+    devices:
+      - name: "Samsung Galaxy A25 (A256)"
+        slug: "samsung-galaxy-a25-a256"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A25 (A256)"
+            price: "100"
+
+      - name: "Samsung Galaxy A24 (A245)"
+        slug: "samsung-galaxy-a24-a245"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A24 (A245)"
+            price: "100"
+
+      - name: "Samsung Galaxy A23 5g (A236)"
+        slug: "samsung-galaxy-a23-5g-a236"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A23 5g (A236)"
+            price: "95"
+
+      - name: "Samsung Galaxy A23 4G (A235)"
+        slug: "samsung-galaxy-a23-4g-a235"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A23 4G (A235)"
+            price: "95"
+
+      - name: "Samsung Galaxy A22 5g(2020) (A226)"
+        slug: "samsung-galaxy-a22-5g-2020-a226"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A22 5g(2020) (A226)"
+            price: "100"
+
+      - name: "Samsung Galaxy A22 4g (2021) (A225)"
+        slug: "samsung-galaxy-a22-4g-2021-a225"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A22 4g (2021) (A225)"
+            price: "85"
+
+      - name: "Samsung Galaxy A21s(2020) (A217)"
+        slug: "samsung-galaxy-a21s-2020-a217"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A21s(2020) (A217)"
+            price: "110"
+
+      - name: "Samsung Galaxy A20s(2019) (A207)"
+        slug: "samsung-galaxy-a20s-2019-a207"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A20s(2019) (A207)"
+            price: "95"
+
+      - name: "Samsung Galaxy A205(2019) (A205)"
+        slug: "samsung-galaxy-a205-2019-a205"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A205(2019) (A205)"
+            price: "95"
+
+      - name: "Samsung Galaxy A20e(2019) (A202)"
+        slug: "samsung-galaxy-a20e-2019-a202"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A20e(2019) (A202)"
+            price: "100"
+
+      - name: "Samsung Galaxy A17 5G (2025) (A176)"
+        slug: "samsung-galaxy-a17-5g-2025-a176"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A17 5G (2025) (A176)"
+            price: "95"
+
+      - name: "Samsung Galaxy A17 4G (2025) (A175)"
+        slug: "samsung-galaxy-a17-4g-2025-a175"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A17 4G (2025) (A175)"
+            price: "100"
+
+      - name: "Samsung Galaxy A16 4G(2024) (A165)"
+        slug: "samsung-galaxy-a16-4g-2024-a165"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A16 4G(2024) (A165)"
+            price: "100"
+
+      - name: "Samsung Galaxy A16 5G(2024) (A166)"
+        slug: "samsung-galaxy-a16-5g-2024-a166"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A16 5G(2024) (A166)"
+            price: "95"
+
+      - name: "Samsung Galaxy A14 5G (A146P)"
+        slug: "samsung-galaxy-a14-5g-a146p"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A14 5G (A146P)"
+            price: "100"
+
+      - name: "Samsung Galaxy A14 5G (NON EU) (A146B)"
+        slug: "samsung-galaxy-a14-5g-non-eu-a146b"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A14 5G (NON EU) (A146B)"
+            price: "100"
+
+      - name: "Samsung Galaxy A14 4G (NON EU) (A145F / M)"
+        slug: "samsung-galaxy-a14-4g-non-eu-a145f-m"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A14 4G (NON EU) (A145F / M)"
+            price: "95"
+
+      - name: "Samsung Galaxy A14 4G (A145R/P)"
+        slug: "samsung-galaxy-a14-4g-a145r-p"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A14 4G (A145R/P)"
+            price: "100"
+
+      - name: "Samsung Galaxy A137(2022) (A137)"
+        slug: "samsung-galaxy-a137-2022-a137"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A137(2022) (A137)"
+            price: "100"
+
+      - name: "Samsung Galaxy A13 5G (2021) (A136)"
+        slug: "samsung-galaxy-a13-5g-2021-a136"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A13 5G (2021) (A136)"
+            price: "90"
+
+      - name: "Samsung Galaxy A13 4G(2022) (A135)"
+        slug: "samsung-galaxy-a13-4g-2022-a135"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A13 4G(2022) (A135)"
+            price: "95"
+
+      - name: "Samsung Galaxy A12(2020) (A125)"
+        slug: "samsung-galaxy-a12-2020-a125"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A12(2020) (A125)"
+            price: "90"
+
+      - name: "Samsung Galaxy A12 NACHO (A127)"
+        slug: "samsung-galaxy-a12-nacho-a127"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A12 NACHO (A127)"
+            price: "95"
+
+      - name: "Samsung Galaxy A11(2020) (A115)"
+        slug: "samsung-galaxy-a11-2020-a115"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A11(2020) (A115)"
+            price: "105"
+
+      - name: "Samsung Galaxy A10s(2019) (A107)"
+        slug: "samsung-galaxy-a10s-2019-a107"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A10s(2019) (A107)"
+            price: "105"
+
+      - name: "Samsung Galaxy A10 NON-EU (A105F / G)"
+        slug: "samsung-galaxy-a10-non-eu-a105f-g"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A10 NON-EU (A105F / G)"
+            price: "105"
+
+      - name: "Samsung Galaxy A07 (2025) (A075)"
+        slug: "samsung-galaxy-a07-2025-a075"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A07 (2025) (A075)"
+            price: "100"
+
+      - name: "Samsung Galaxy A06 (A065)"
+        slug: "samsung-galaxy-a06-a065"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A06 (A065)"
+            price: "100"
+
+      - name: "Samsung Galaxy A05s (A057)"
+        slug: "samsung-galaxy-a05s-a057"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A05s (A057)"
+            price: "90"
+
+      - name: "Samsung Galaxy A05 (A055)"
+        slug: "samsung-galaxy-a05-a055"
+        repairs:
+          - name: "Screen Replacement"
+            description: "Black service pack screen replacement for Samsung Galaxy A05 (A055)"
+            price: "85"
+
   - name: "Google Pixel"
     slug: "google-pixel"
     icon: "phone"
