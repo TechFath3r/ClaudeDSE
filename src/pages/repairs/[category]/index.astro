@@ -8,7 +8,7 @@ import Breadcrumb from '@components/shared/Breadcrumb.astro';
 import SearchFilter from '@components/shared/SearchFilter.astro';
 import PriceDisplay from '@components/repairs/PriceDisplay.astro';
 import { getAllCategories, hasDevices } from '@/lib/repairs';
-import type { Category } from '@/lib/repairs';
+import type { Category, Device } from '@/lib/repairs';
 import { getRepairBookingOptions } from '@/lib/booking';
 
 export function getStaticPaths() {
@@ -25,6 +25,52 @@ interface Props {
 
 const { category } = Astro.props;
 const showDevices = hasDevices(category);
+
+type DeviceGroup = {
+  heading: string;
+  devices: Device[];
+};
+
+function getSamsungSeriesHeading(device: Device): string {
+  const name = device.name.toLowerCase();
+
+  if (name.includes('tab')) return 'Tablets';
+  if (name.includes('note')) return 'Galaxy Note Series';
+  if (name.includes('galaxy z') || name.includes('fold') || name.includes('flip')) return 'Galaxy Z Series';
+  if (name.includes('galaxy a')) return 'Galaxy A Series';
+  if (name.includes('galaxy s')) return 'Galaxy S Series';
+
+  return 'Other Samsung Models';
+}
+
+function groupDevices(category: Category): DeviceGroup[] {
+  const devices = category.devices ?? [];
+
+  if (category.slug !== 'samsung') {
+    return [{ heading: '', devices }];
+  }
+
+  const preferredOrder = [
+    'Galaxy S Series',
+    'Galaxy A Series',
+    'Galaxy Note Series',
+    'Galaxy Z Series',
+    'Tablets',
+    'Other Samsung Models',
+  ];
+  const grouped = new Map<string, Device[]>();
+
+  for (const device of devices) {
+    const heading = getSamsungSeriesHeading(device);
+    grouped.set(heading, [...(grouped.get(heading) ?? []), device]);
+  }
+
+  return preferredOrder
+    .filter((heading) => grouped.has(heading))
+    .map((heading) => ({ heading, devices: grouped.get(heading)! }));
+}
+
+const deviceGroups = showDevices ? groupDevices(category) : [];
 
 // Flat categories (no per-device pages) act as their own device for booking.
 const flatBookingCtx = {
@@ -61,30 +107,46 @@ const flatBookingCtx = {
       <!-- Device grid mode -->
       <SearchFilter placeholder={`Search ${category.name} models...`} targetSelector="[data-device-card]" />
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {category.devices!.map((device, i) => (
-          <a
-            href={`/repairs/${category.slug}/${device.slug}/`}
-            class={`reveal reveal-delay-${(i % 4) + 1}`}
-            data-device-card
-            data-search={device.name}
-          >
-            <Card class="h-full group">
-              <div class="flex items-center justify-between gap-3">
-                <div>
-                  <h2 class="font-(family-name:--font-heading) font-semibold text-(--color-text-primary)">
-                    {device.name}
-                  </h2>
-                  <p class="text-sm text-(--color-text-secondary) mt-1">
-                    {device.repairs.length} repairs available
-                  </p>
-                </div>
-                <svg class="w-5 h-5 text-(--color-text-secondary) group-hover:text-(--color-brand) group-hover:translate-x-0.5 transition-all shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
+      <div class="space-y-10">
+        {deviceGroups.map((group) => (
+          <section>
+            {group.heading && (
+              <div class="mb-4 flex items-center gap-3">
+                <h2 class="font-(family-name:--font-heading) text-2xl font-bold text-(--color-text-primary)">
+                  {group.heading}
+                </h2>
+                <span class="h-px flex-1 bg-(--color-bg-secondary)"></span>
+                <span class="text-sm text-(--color-text-secondary)">{group.devices.length} models</span>
               </div>
-            </Card>
-          </a>
+            )}
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {group.devices.map((device, i) => (
+                <a
+                  href={`/repairs/${category.slug}/${device.slug}/`}
+                  class={`reveal reveal-delay-${(i % 4) + 1}`}
+                  data-device-card
+                  data-search={`${group.heading} ${device.name}`}
+                >
+                  <Card class="h-full group">
+                    <div class="flex items-center justify-between gap-3">
+                      <div>
+                        <h3 class="font-(family-name:--font-heading) font-semibold text-(--color-text-primary)">
+                          {device.name}
+                        </h3>
+                        <p class="text-sm text-(--color-text-secondary) mt-1">
+                          {device.repairs.length} repairs available
+                        </p>
+                      </div>
+                      <svg class="w-5 h-5 text-(--color-text-secondary) group-hover:text-(--color-brand) group-hover:translate-x-0.5 transition-all shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </Card>
+                </a>
+              ))}
+            </div>
+          </section>
         ))}
       </div>
     ) : (
