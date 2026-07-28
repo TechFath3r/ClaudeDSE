@@ -24,6 +24,13 @@ categories:
             tiers:
               - label: "Official Apple Battery"
                 price: "120"
+          - name: "Rear Camera Lens Replacement"
+            description: "Camera lens glass replacement"
+            tiers:
+              - label: "Aftermarket"
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -53,6 +60,13 @@ categories:
                 price: "65"
               - label: "Official Apple Battery"
                 price: "100"
+          - name: "Rear Camera Lens Replacement"
+            description: "Camera lens glass replacement"
+            tiers:
+              - label: "Aftermarket"
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -82,6 +96,13 @@ categories:
                 price: "75"
               - label: "Official Apple Battery"
                 price: "120"
+          - name: "Rear Camera Lens Replacement"
+            description: "Camera lens glass replacement"
+            tiers:
+              - label: "Aftermarket"
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -111,6 +132,13 @@ categories:
                 price: "75"
               - label: "Official Apple Battery"
                 price: "120"
+          - name: "Rear Camera Lens Replacement"
+            description: "Camera lens glass replacement"
+            tiers:
+              - label: "Aftermarket"
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -140,6 +168,13 @@ categories:
                 price: "75"
               - label: "Official Apple Battery"
                 price: "120"
+          - name: "Rear Camera Lens Replacement"
+            description: "Camera lens glass replacement"
+            tiers:
+              - label: "Aftermarket"
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -194,13 +229,12 @@ categories:
                 price: "110"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "69"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -255,13 +289,12 @@ categories:
                 price: "110"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "72"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -316,13 +349,12 @@ categories:
                 price: "110"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "72"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -379,13 +411,12 @@ categories:
                 price: "110"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "69"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -440,13 +471,12 @@ categories:
                 price: "110"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "69"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -501,13 +531,12 @@ categories:
                 price: "110"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "69"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -564,13 +593,12 @@ categories:
                 price: "110"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "69"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -627,13 +655,12 @@ categories:
                 price: "100"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "69"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -690,13 +717,12 @@ categories:
                 price: "100"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "69"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -751,13 +777,12 @@ categories:
                 price: "90"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "69"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -812,13 +837,12 @@ categories:
                 price: "90"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "69"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -873,13 +897,12 @@ categories:
                 price: "90"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "69"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -934,13 +957,12 @@ categories:
                 price: "90"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "69"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -995,13 +1017,12 @@ categories:
                 price: "90"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "69"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -1056,13 +1077,12 @@ categories:
                 price: "90"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
-              - label: "Real Sapphire"
-                price: "69"
               - label: "Aftermarket"
-                price: "40"
-            # quote: true
+                price: "45"
+              - label: "Real Sapphire"
+                price: "65"
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -1117,13 +1137,12 @@ categories:
                 price: "85"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
+              - label: "Aftermarket"
+                price: "45"
               - label: "Real Sapphire"
                 price: "65"
-              - label: "Aftermarket"
-                price: "35"
-            # quote: true
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
@@ -1178,13 +1197,12 @@ categories:
                 price: "85"
             # quote: true
           - name: "Rear Camera Lens Replacement"
-            description: "Camera glass replacement"
+            description: "Camera lens glass replacement"
             tiers:
+              - label: "Aftermarket"
+                price: "45"
               - label: "Real Sapphire"
                 price: "65"
-              - label: "Aftermarket"
-                price: "35"
-            # quote: true
           - name: "Water Damage Assessment"
             description: "Professional assessment and repair"
             quote: true
