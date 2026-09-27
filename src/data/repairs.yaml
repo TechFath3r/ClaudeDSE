@@ -3049,7 +3049,7 @@ categories:
         repairs:
           - name: "HDMI Port Repair"
             description: "HDMI port replacement"
-            price: "75"
+            price: "80"
           - name: "Other Faults"
             description: "Diagnostic and repair for other issues"
             quote: true
@@ -3059,7 +3059,7 @@ categories:
         repairs:
           - name: "HDMI Port Repair"
             description: "HDMI port replacement"
-            price: "75"
+            price: "80"
           - name: "Other Faults"
             description: "Diagnostic and repair for other issues"
             quote: true
@@ -3069,7 +3069,7 @@ categories:
         repairs:
           - name: "HDMI Port Repair"
             description: "HDMI port replacement"
-            price: "75"
+            price: "80"
           - name: "Other Faults"
             description: "Diagnostic and repair for other issues"
             quote: true
@@ -3079,7 +3079,7 @@ categories:
         repairs:
           - name: "HDMI Port Repair"
             description: "HDMI port replacement"
-            price: "75"
+            price: "80"
           - name: "Other Faults"
             description: "Diagnostic and repair for other issues"
             quote: true
@@ -3089,7 +3089,7 @@ categories:
         repairs:
           - name: "HDMI Port Repair"
             description: "HDMI port replacement"
-            price: "75"
+            price: "80"
           - name: "Other Faults"
             description: "Diagnostic and repair for other issues"
             quote: true
@@ -3099,7 +3099,7 @@ categories:
         repairs:
           - name: "HDMI Port Repair"
             description: "HDMI port replacement"
-            price: "75"
+            price: "80"
           - name: "USB Port Replacement"
             description: "USB port replacement"
             price: "75"
@@ -3108,7 +3108,7 @@ categories:
             price: "85"
           - name: "Deep Clean & Liquid Metal Refresh"
             description: "Internal deep clean and liquid metal refresh"
-            price: "65"
+            price: "75"
           - name: "Other Faults"
             description: "Diagnostic and repair for other issues"
             quote: true
@@ -3118,7 +3118,7 @@ categories:
         repairs:
           - name: "HDMI Port Repair"
             description: "HDMI port replacement"
-            price: "75"
+            price: "80"
           - name: "Other Faults"
             description: "Diagnostic and repair for other issues"
             quote: true
@@ -3128,7 +3128,7 @@ categories:
         repairs:
           - name: "HDMI Port Repair"
             description: "HDMI port replacement"
-            price: "75"
+            price: "80"
           - name: "Other Faults"
             description: "Diagnostic and repair for other issues"
             quote: true
@@ -3138,7 +3138,7 @@ categories:
         repairs:
           - name: "HDMI Port Repair"
             description: "HDMI port replacement"
-            price: "75"
+            price: "80"
           - name: "Other Faults"
             description: "Diagnostic and repair for other issues"
             quote: true
