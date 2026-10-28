@@ -104,19 +104,13 @@ import Button from '../components/shared/Button.astro';
         </div>
       </div>
 
-      <!-- Map -->
+      <!-- A plain link avoids contacting Google Maps before a visitor chooses to leave this site. -->
       <div class="reveal reveal-delay-2">
-        <div class="rounded-xl overflow-hidden shadow-lg h-full min-h-[400px]">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2421.5!2d-0.1875!3d52.8167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d7e8a1f7e5b5e7%3A0x4d3b4a1f7e5b5e7!2s61+Rotten+Row%2C+Pinchbeck%2C+Spalding+PE11+3RQ!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
-            width="100%"
-            height="100%"
-            style="border:0; min-height: 400px;"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="DannStarr Electronics location on Google Maps"
-          ></iframe>
+        <div class="rounded-xl shadow-lg h-full p-8 flex flex-col justify-center items-start gap-4 bg-(--color-bg-secondary)">
+          <h2 class="text-xl font-semibold">Find the workshop</h2>
+          <p>61 Rotten Row, Pinchbeck, Spalding, PE11 3RQ</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=61+Rotten+Row+Pinchbeck+Spalding+PE11+3RQ" target="_blank" rel="noopener noreferrer" class="underline font-semibold">Open in Google Maps (new tab)</a>
+          <p class="text-sm text-(--color-text-secondary)">Google Maps only loads if you follow this link.</p>
         </div>
       </div>
     </div>

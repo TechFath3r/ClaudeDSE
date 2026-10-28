@@ -1,0 +1,41 @@
+---
+// Static rendered path is an allowlist: never collect arbitrary URL paths.
+const pagePath = Astro.url.pathname;
+---
+<aside id="analytics-notice" aria-labelledby="analytics-heading" data-page-path={pagePath} hidden>
+  <div>
+    <h2 id="analytics-heading">Optional analytics</h2>
+    <p>May we use Google Analytics cookies to understand visits? Nothing loads until you accept.
+      <a href="/privacy/">Privacy &amp; cookies</a>. Change your choice anytime in the footer.</p>
+    <p id="analytics-status" role="status"></p>
+  </div>
+  <div class="analytics-actions">
+    <button type="button" data-analytics-choice="accepted">Accept analytics</button>
+    <button type="button" data-analytics-choice="rejected">Reject analytics</button>
+  </div>
+</aside>
+<noscript><p class="analytics-noscript">Analytics is off because JavaScript is disabled. <a href="/privacy/">Privacy &amp; cookies</a>.</p></noscript>
+<script>
+  import { initConsent } from '../../scripts/analytics-consent.js';
+  initConsent(window, document);
+</script>
+<style>
+  #analytics-notice[hidden] { display: none; }
+  #analytics-notice {
+    position: sticky; bottom: 0; z-index: 40; display: flex; align-items: center;
+    justify-content: space-between; gap: 1rem; padding: 1rem max(1rem, calc((100vw - 80rem) / 2));
+    border-top: 1px solid var(--color-text-secondary); background: var(--color-bg-secondary);
+    color: var(--color-text-primary); font-size: .875rem;
+  }
+  h2 { font-weight: 600; }
+  a { text-decoration: underline; }
+  .analytics-actions { display: flex; gap: .5rem; flex-shrink: 0; }
+  button { padding: .65rem .85rem; border: 1px solid currentColor; border-radius: .4rem; cursor: pointer; font-weight: 600; }
+  button:focus-visible { outline: 3px solid var(--color-brand); outline-offset: 3px; }
+  button:hover { background: var(--color-bg-primary); }
+  .analytics-noscript { text-align: center; font-size: .875rem; padding: .5rem; }
+  @media (max-width: 640px) {
+    #analytics-notice { flex-direction: column; align-items: stretch; gap: .6rem; }
+    .analytics-actions > button { flex: 1; }
+  }
+</style>

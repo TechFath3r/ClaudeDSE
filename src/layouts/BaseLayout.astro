@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import AnalyticsConsent from '../components/layout/AnalyticsConsent.astro';
 
 interface Props {
   title: string;
@@ -152,6 +153,7 @@ const fullTitle = title === 'Home' ? 'DannStarr Electronics | Your Local Tech Ex
 
     <!-- Future booking app root -->
     <div id="booking-root"></div>
+    <AnalyticsConsent />
 
     <!-- Scroll reveal -->
     <script>
